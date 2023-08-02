@@ -9,8 +9,8 @@
 #import "FFAudioDecoder.h"
 #import "FFFrameQueue.h"
 #import "FFPacketQueue.h"
-#import "swscale.h"
-#import "swresample.h"
+#import "libswscale/swscale.h"
+#import "libswresample/swresample.h"
 
 #import <Accelerate/Accelerate.h>
 #import "FFSeekContext.h"

@@ -13,7 +13,7 @@
 #import <UIKit/UIKit.h>
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
-#import "avformat.h"
+#import "libavformat/avformat.h"
 #import "FFState.h"
 #import "FFQueueContext.h"
 

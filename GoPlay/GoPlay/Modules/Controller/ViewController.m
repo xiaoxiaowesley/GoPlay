@@ -14,6 +14,8 @@
 #import "Masonry.h"
 #import "ReactiveCocoa.h"
 
+#import "GoPlay-Swift.h"
+
 @interface ViewController ()
 @end
 
@@ -37,9 +39,12 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-	PlayViewController* vc = [[PlayViewController alloc]init];
-	vc.url = @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";	//input media url
-	[self.navigationController pushViewController:vc animated:YES];
+//	PlayViewController* vc = [[PlayViewController alloc]init];
+//	vc.url = @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";	//input media url
+//	[self.navigationController pushViewController:vc animated:YES];
+
+//    UIViewController *detailsViewController = [[ListViewInterface new] makeShipDetailsUI:@"Sarita"];
+//    [self presentModalViewController:detailsViewController animated:YES];
 }
 
 @end

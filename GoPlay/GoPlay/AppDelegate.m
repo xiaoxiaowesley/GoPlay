@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+//#import <SwiftUI/SwiftUI.h>
+#import "GoPlay-Swift.h" // Replace with your actual project name
 
 @interface AppDelegate ()
 
@@ -26,9 +28,11 @@
 	}
 
 	[[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    
+    UIViewController *vc = [[ListViewInterface new] makeShipDetailsUI:@"Sarita"];
 
-	ViewController* vc = [[ViewController alloc] init];
 	UINavigationController* navc = [[UINavigationController alloc]initWithRootViewController:vc];
+    
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window.backgroundColor = [UIColor whiteColor];
 	self.window.rootViewController = navc;

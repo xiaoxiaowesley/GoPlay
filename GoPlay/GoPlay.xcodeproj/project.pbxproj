@@ -14,6 +14,7 @@
 		000E225A2A7D5A0600072C77 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DD2A7D5A0600072C77 /* libavdevice.a */; };
 		000E225B2A7D5A0600072C77 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DE2A7D5A0600072C77 /* libswresample.a */; };
 		000E225C2A7D5A0600072C77 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DF2A7D5A0600072C77 /* libswscale.a */; };
+		00A4511A2A8A91A4003903F3 /* FFmpegUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A451192A8A91A4003903F3 /* FFmpegUtil.m */; };
 		00BF9F072A81577100CFF4DB /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF9F062A81577100CFF4DB /* ListView.swift */; };
 		00BF9F092A81585300CFF4DB /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */; };
 		00BF9F0D2A815AE000CFF4DB /* ListViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF9F0C2A815AE000CFF4DB /* ListViewInterface.swift */; };
@@ -299,6 +300,8 @@
 		000E22522A7D5A0600072C77 /* dv_profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dv_profile.h; sourceTree = "<group>"; };
 		000E22542A7D5A0600072C77 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		000E22552A7D5A0600072C77 /* swresample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swresample.h; sourceTree = "<group>"; };
+		00A451182A8A91A4003903F3 /* FFmpegUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFmpegUtil.h; sourceTree = "<group>"; };
+		00A451192A8A91A4003903F3 /* FFmpegUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFmpegUtil.m; sourceTree = "<group>"; };
 		00BF9F052A81577000CFF4DB /* GoPlay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoPlay-Bridging-Header.h"; sourceTree = "<group>"; };
 		00BF9F062A81577100CFF4DB /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewController.swift; sourceTree = "<group>"; };
@@ -1368,6 +1371,8 @@
 				C44284622281726600A01637 /* LoadingUtil.m */,
 				C442849C2281738B00A01637 /* LoadingView.h */,
 				C442849B2281738B00A01637 /* LoadingView.m */,
+				00A451182A8A91A4003903F3 /* FFmpegUtil.h */,
+				00A451192A8A91A4003903F3 /* FFmpegUtil.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1608,6 +1613,7 @@
 				C442841E228169F300A01637 /* FFGLProgramNV12.m in Sources */,
 				C442849A2281734D00A01637 /* MBProgressHUD.m in Sources */,
 				C44283F22281693D00A01637 /* FFPlay.m in Sources */,
+				00A4511A2A8A91A4003903F3 /* FFmpegUtil.m in Sources */,
 				C442838D2281684500A01637 /* EXTRuntimeExtensions.m in Sources */,
 				C44283942281684500A01637 /* RACSequence.m in Sources */,
 				C44281AA228167EF00A01637 /* AppDelegate.m in Sources */,

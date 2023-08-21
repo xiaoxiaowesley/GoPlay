@@ -13,7 +13,7 @@ import SwiftUI
 class ListViewInterface: NSObject {
  
     @objc func makeShipDetailsUI(_ name: String) -> UIViewController{
-        var details = ListView()
+        let details = ListView()
         return UIHostingController(rootView: details)
     }
 }

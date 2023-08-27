@@ -30,8 +30,11 @@
 	[[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     
     UIViewController *vc = [[MainViewInterface new] makeShipDetailsUI:@"Sarita"];
-
+    
+//    ViewController * vc2 = [[ViewController alloc]init];
 	UINavigationController* navc = [[UINavigationController alloc]initWithRootViewController:vc];
+    
+    navc.navigationBar.tintColor = [UIColor redColor];
     
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window.backgroundColor = [UIColor whiteColor];

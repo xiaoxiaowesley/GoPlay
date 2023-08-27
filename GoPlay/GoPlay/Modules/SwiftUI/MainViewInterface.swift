@@ -15,8 +15,7 @@ import SwiftUI
 class MainViewInterface: NSObject {
  
     @objc func makeShipDetailsUI(_ name: String) -> UIViewController{
-        let details = MainView()
-        return UIHostingController(rootView: details)
+        return MainView().embeddedInHostingController();
     }
 }
 

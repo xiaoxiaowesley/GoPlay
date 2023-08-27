@@ -9,65 +9,80 @@ import SwiftUI
 
 
 struct MainView: View {
-
+    @EnvironmentObject var hostingProvider: ViewControllerProvider
+    
+    func updateTitle(title:String){
+        let controller = hostingProvider.viewController
+        controller?.title = title
+    }
     var body: some View {
+        
         TabView {
-//             NavigationView {
-                VStack{
-                    ListView()
-                }
-                .navigationBarTitle("Page One", displayMode: .inline)
-                .onAppear {
-                    
-                }
-//            }
+            VStack{
+                ListView()
+            }
+            .onAppear {
+                updateTitle(title: "Page One")
+            }
             .tabItem {
                 Image(systemName: "1.circle")
                 Text("Page 1")
             }
-
-//            NavigationView {
-                VStack{
-//                    NavigationLink(destination: SettingView()) {
-//                           Text("跳转到详情页")
-//                       }
-                }
-                .navigationBarTitle("Page Two", displayMode: .inline)
-                .onAppear {
-                }
-//            }
+            VStack{
+            }
+            .onAppear {
+                updateTitle(title: "Page Two")
+            }
             .tabItem {
                 Image(systemName: "2.circle")
                 Text("Page 2")
             }
         }
         .onAppear {
-            UINavigationBarAppearance()
-                .setColor(title: .white, background:UIColor(FUColors.turquoise))
+            
+            let controller = hostingProvider.viewController
+            
+            if let navi = controller?.navigationController {
+                
+                let backgourndColor = UIColor(FUColors.turquoise)
+                let titleColor = UIColor.white
+                
+                navi.navigationBar.tintColor = titleColor
+                navi.navigationBar.backgroundColor = backgourndColor
+                if #available(iOS 13.0, *) {
+                    if let keyWindow = UIApplication.shared.keyWindow {
+                        let statusBar = UIView(frame: keyWindow.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero)
+                        statusBar.backgroundColor = backgourndColor
+                        keyWindow.addSubview(statusBar)
+                    }
+                } else {
+                    if let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView {
+                        statusBar.backgroundColor = backgourndColor
+                    }
+                }
+            }
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
     }
 }
-extension UINavigationBarAppearance {
-    func setColor(title: UIColor? = nil, background: UIColor? = nil) {
-        configureWithTransparentBackground()
-        if let titleColor = title {
-            largeTitleTextAttributes = [.foregroundColor: titleColor]
-            titleTextAttributes = [.foregroundColor: titleColor]
-        }
-        backgroundColor = background
-        UINavigationBar.appearance().scrollEdgeAppearance = self
-        UINavigationBar.appearance().standardAppearance = self
-        
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
-        UINavigationBar.appearance().tintColor = .white
-        
-        backButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]
+
+
+extension View {
+    func embeddedInHostingController() -> UIHostingController<some View> {
+        let provider = ViewControllerProvider()
+        let hostingAccessingView = environmentObject(provider)
+        let hostingController = UIHostingController(rootView: hostingAccessingView)
+        provider.viewController = hostingController
+        return hostingController
     }
 }
 
+final class ViewControllerProvider: ObservableObject {
+    fileprivate(set) weak var viewController: UIViewController?
+}

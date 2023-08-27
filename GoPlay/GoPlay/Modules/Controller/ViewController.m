@@ -36,6 +36,23 @@
 	[tipsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.center.equalTo(self.view);
 	}];
+
+	// add navigation bar background color to yellow
+	self.navigationController.navigationBar.barTintColor = [UIColor yellowColor];
+    self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
+	// 
+    // Set status bar's background color to red
+    if (@available(iOS 13.0, *)) {
+        UIView *statusBar = [[UIView alloc]initWithFrame:[UIApplication sharedApplication].keyWindow.windowScene.statusBarManager.statusBarFrame] ;
+        statusBar.backgroundColor = [UIColor redColor];
+        [[UIApplication sharedApplication].keyWindow addSubview:statusBar];
+    } else {
+        UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+        statusBar.backgroundColor = [UIColor redColor];
+    }
+	
+
+	
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

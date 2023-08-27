@@ -12,6 +12,7 @@
 		0008D4F02A9B9C7D0061DEF5 /* FUGlyphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4ED2A9B9C7D0061DEF5 /* FUGlyphs.swift */; };
 		0008D4F22A9B9CD30061DEF5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4F12A9B9CD30061DEF5 /* MainView.swift */; };
 		0008D4F42A9B9CF80061DEF5 /* MainViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4F32A9B9CF80061DEF5 /* MainViewInterface.swift */; };
+		0008D4FE2A9BB6F00061DEF5 /* FolderTypeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4FD2A9BB6F00061DEF5 /* FolderTypeList.swift */; };
 		000E22562A7D5A0600072C77 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21D92A7D5A0600072C77 /* libavutil.a */; };
 		000E22572A7D5A0600072C77 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DA2A7D5A0600072C77 /* libavfilter.a */; };
 		000E22582A7D5A0600072C77 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DB2A7D5A0600072C77 /* libavcodec.a */; };
@@ -192,6 +193,7 @@
 		0008D4ED2A9B9C7D0061DEF5 /* FUGlyphs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUGlyphs.swift; sourceTree = "<group>"; };
 		0008D4F12A9B9CD30061DEF5 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0008D4F32A9B9CF80061DEF5 /* MainViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInterface.swift; sourceTree = "<group>"; };
+		0008D4FD2A9BB6F00061DEF5 /* FolderTypeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTypeList.swift; sourceTree = "<group>"; };
 		000E21D92A7D5A0600072C77 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
 		000E21DA2A7D5A0600072C77 /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavfilter.a; sourceTree = "<group>"; };
 		000E21DB2A7D5A0600072C77 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavcodec.a; sourceTree = "<group>"; };
@@ -878,6 +880,7 @@
 		00BF9F042A81575B00CFF4DB /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				0008D4FD2A9BB6F00061DEF5 /* FolderTypeList.swift */,
 				0008D4EA2A9B9C7D0061DEF5 /* FlatUI */,
 				0008D4F12A9B9CD30061DEF5 /* MainView.swift */,
 				00BF9F062A81577100CFF4DB /* ListView.swift */,
@@ -1513,6 +1516,7 @@
 				C44284032281698600A01637 /* FFUtil.mm in Sources */,
 				C44283872281684500A01637 /* RACStream.m in Sources */,
 				C44283972281684500A01637 /* NSURLConnection+RACSupport.m in Sources */,
+				0008D4FE2A9BB6F00061DEF5 /* FolderTypeList.swift in Sources */,
 				C44283AF2281684500A01637 /* NSArray+RACSequenceAdditions.m in Sources */,
 				C442848D228172B900A01637 /* MASViewAttribute.m in Sources */,
 				C44283D12281684500A01637 /* RACTuple.m in Sources */,

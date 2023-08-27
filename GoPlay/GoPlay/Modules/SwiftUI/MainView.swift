@@ -15,7 +15,8 @@ struct MainView: View {
         
         TabView {
             VStack{
-                ListView()
+//                ListView()
+                FolderTypeList()
             }
             .onAppear {
                 updateTitle(title: "Page One")

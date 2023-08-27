@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0008D4EE2A9B9C7D0061DEF5 /* FUColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4EB2A9B9C7D0061DEF5 /* FUColor.swift */; };
+		0008D4EF2A9B9C7D0061DEF5 /* FUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4EC2A9B9C7D0061DEF5 /* FUButton.swift */; };
+		0008D4F02A9B9C7D0061DEF5 /* FUGlyphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4ED2A9B9C7D0061DEF5 /* FUGlyphs.swift */; };
+		0008D4F22A9B9CD30061DEF5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4F12A9B9CD30061DEF5 /* MainView.swift */; };
+		0008D4F42A9B9CF80061DEF5 /* MainViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4F32A9B9CF80061DEF5 /* MainViewInterface.swift */; };
 		000E22562A7D5A0600072C77 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21D92A7D5A0600072C77 /* libavutil.a */; };
 		000E22572A7D5A0600072C77 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DA2A7D5A0600072C77 /* libavfilter.a */; };
 		000E22582A7D5A0600072C77 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DB2A7D5A0600072C77 /* libavcodec.a */; };
@@ -17,7 +22,6 @@
 		00A4511A2A8A91A4003903F3 /* FFmpegUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A451192A8A91A4003903F3 /* FFmpegUtil.m */; };
 		00BF9F072A81577100CFF4DB /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF9F062A81577100CFF4DB /* ListView.swift */; };
 		00BF9F092A81585300CFF4DB /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */; };
-		00BF9F0D2A815AE000CFF4DB /* ListViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF9F0C2A815AE000CFF4DB /* ListViewInterface.swift */; };
 		1E33E84E2A78D90D00C32830 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E8472A78D90D00C32830 /* libswresample.a */; };
 		1E33E84F2A78D90E00C32830 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E8482A78D90D00C32830 /* libavcodec.a */; };
 		1E33E8502A78D90E00C32830 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E8492A78D90D00C32830 /* libavdevice.a */; };
@@ -183,6 +187,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0008D4EB2A9B9C7D0061DEF5 /* FUColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUColor.swift; sourceTree = "<group>"; };
+		0008D4EC2A9B9C7D0061DEF5 /* FUButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUButton.swift; sourceTree = "<group>"; };
+		0008D4ED2A9B9C7D0061DEF5 /* FUGlyphs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUGlyphs.swift; sourceTree = "<group>"; };
+		0008D4F12A9B9CD30061DEF5 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		0008D4F32A9B9CF80061DEF5 /* MainViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInterface.swift; sourceTree = "<group>"; };
 		000E21D92A7D5A0600072C77 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
 		000E21DA2A7D5A0600072C77 /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavfilter.a; sourceTree = "<group>"; };
 		000E21DB2A7D5A0600072C77 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavcodec.a; sourceTree = "<group>"; };
@@ -304,7 +313,6 @@
 		00A451192A8A91A4003903F3 /* FFmpegUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFmpegUtil.m; sourceTree = "<group>"; };
 		00BF9F062A81577100CFF4DB /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewController.swift; sourceTree = "<group>"; };
-		00BF9F0C2A815AE000CFF4DB /* ListViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewInterface.swift; sourceTree = "<group>"; };
 		1E33E8472A78D90D00C32830 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = GoPlay/Vendor/FFmpeg/lib/libswresample.a; sourceTree = "<group>"; };
 		1E33E8482A78D90D00C32830 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = GoPlay/Vendor/FFmpeg/lib/libavcodec.a; sourceTree = "<group>"; };
 		1E33E8492A78D90D00C32830 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = GoPlay/Vendor/FFmpeg/lib/libavdevice.a; sourceTree = "<group>"; };
@@ -670,6 +678,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0008D4EA2A9B9C7D0061DEF5 /* FlatUI */ = {
+			isa = PBXGroup;
+			children = (
+				0008D4EB2A9B9C7D0061DEF5 /* FUColor.swift */,
+				0008D4EC2A9B9C7D0061DEF5 /* FUButton.swift */,
+				0008D4ED2A9B9C7D0061DEF5 /* FUGlyphs.swift */,
+			);
+			path = FlatUI;
+			sourceTree = "<group>";
+		};
 		000E21D82A7D5A0600072C77 /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -860,8 +878,10 @@
 		00BF9F042A81575B00CFF4DB /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				0008D4EA2A9B9C7D0061DEF5 /* FlatUI */,
+				0008D4F12A9B9CD30061DEF5 /* MainView.swift */,
 				00BF9F062A81577100CFF4DB /* ListView.swift */,
-				00BF9F0C2A815AE000CFF4DB /* ListViewInterface.swift */,
+				0008D4F32A9B9CF80061DEF5 /* MainViewInterface.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -1517,6 +1537,7 @@
 				C442837E2281684500A01637 /* UITableViewHeaderFooterView+RACSignalSupport.m in Sources */,
 				C4428488228172B900A01637 /* MASLayoutConstraint.m in Sources */,
 				C44283BD2281684500A01637 /* RACReturnSignal.m in Sources */,
+				0008D4F42A9B9CF80061DEF5 /* MainViewInterface.swift in Sources */,
 				C44283BC2281684500A01637 /* UIRefreshControl+RACCommandSupport.m in Sources */,
 				C442841F228169F300A01637 /* FFGLProgramYUV420.m in Sources */,
 				C44283A22281684500A01637 /* RACKVOChannel.m in Sources */,
@@ -1547,7 +1568,6 @@
 				C44283E42281690300A01637 /* FFFrame.m in Sources */,
 				C442839B2281684500A01637 /* UIImagePickerController+RACSignalSupport.m in Sources */,
 				C44284932281730B00A01637 /* VideoView.m in Sources */,
-				00BF9F0D2A815AE000CFF4DB /* ListViewInterface.swift in Sources */,
 				C4428420228169F300A01637 /* FFGLProgram.m in Sources */,
 				00BF9F072A81577100CFF4DB /* ListView.swift in Sources */,
 				C4428487228172B900A01637 /* MASConstraintMaker.m in Sources */,
@@ -1589,6 +1609,7 @@
 				C44283C72281684500A01637 /* NSObject+RACKVOWrapper.m in Sources */,
 				C4428485228172B900A01637 /* ViewController+MASAdditions.m in Sources */,
 				C4428484228172B900A01637 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				0008D4F22A9B9CD30061DEF5 /* MainView.swift in Sources */,
 				C44283792281684500A01637 /* UIStepper+RACSignalSupport.m in Sources */,
 				C442838C2281684500A01637 /* MKAnnotationView+RACSignalSupport.m in Sources */,
 				C4428456228171C600A01637 /* UITabBarController+Autorotate.m in Sources */,
@@ -1611,10 +1632,12 @@
 				C442839F2281684500A01637 /* RACErrorSignal.m in Sources */,
 				C442838B2281684500A01637 /* RACTupleSequence.m in Sources */,
 				C442841E228169F300A01637 /* FFGLProgramNV12.m in Sources */,
+				0008D4EE2A9B9C7D0061DEF5 /* FUColor.swift in Sources */,
 				C442849A2281734D00A01637 /* MBProgressHUD.m in Sources */,
 				C44283F22281693D00A01637 /* FFPlay.m in Sources */,
 				00A4511A2A8A91A4003903F3 /* FFmpegUtil.m in Sources */,
 				C442838D2281684500A01637 /* EXTRuntimeExtensions.m in Sources */,
+				0008D4F02A9B9C7D0061DEF5 /* FUGlyphs.swift in Sources */,
 				C44283942281684500A01637 /* RACSequence.m in Sources */,
 				C44281AA228167EF00A01637 /* AppDelegate.m in Sources */,
 				C44283992281684500A01637 /* RACSubscriptingAssignmentTrampoline.m in Sources */,
@@ -1632,6 +1655,7 @@
 				C442843722816CBF00A01637 /* FFQueueContext.m in Sources */,
 				C44283B02281684500A01637 /* RACQueueScheduler.m in Sources */,
 				C44283C12281684500A01637 /* RACDisposable.m in Sources */,
+				0008D4EF2A9B9C7D0061DEF5 /* FUButton.swift in Sources */,
 				C44284682281726600A01637 /* ColorUtil.m in Sources */,
 				C442839D2281684500A01637 /* UIControl+RACSignalSupportPrivate.m in Sources */,
 				C44283AC2281684500A01637 /* RACScopedDisposable.m in Sources */,
@@ -1782,10 +1806,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 43Y657P48S;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3T22C9YP6X;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/GoPlay/Vendor/FFmpeg/include/libavformat\"",
 					"\"$(SRCROOT)/GoPlay/Vendor/FFmpeg/include\"",
@@ -1804,7 +1826,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoxiao.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Xianyu Profile For Everything";
 				SWIFT_OBJC_BRIDGING_HEADER = "GoPlay/GoPlay-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;

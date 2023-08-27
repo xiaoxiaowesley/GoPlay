@@ -29,7 +29,7 @@
 
 	[[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     
-    UIViewController *vc = [[ListViewInterface new] makeShipDetailsUI:@"Sarita"];
+    UIViewController *vc = [[MainViewInterface new] makeShipDetailsUI:@"Sarita"];
 
 	UINavigationController* navc = [[UINavigationController alloc]initWithRootViewController:vc];
     

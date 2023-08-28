@@ -15,7 +15,6 @@ struct MainView: View {
         
         TabView {
             VStack{
-//                ListView()
                 FolderTypeList()
             }
             .onAppear {
@@ -50,14 +49,12 @@ struct MainView: View {
         let controller = hostingProvider.viewController
         
         if let navi = controller?.navigationController {
-                            
+            
             let backgourndColor = UIColor(background)
             let titleColor = UIColor(title)
             
             
-            navi.navigationBar.tintColor = titleColor
-            navi.navigationBar.backgroundColor = backgourndColor
-            if #available(iOS 13.0, *) {
+             if #available(iOS 13.0, *) {
                 if let keyWindow = UIApplication.shared.keyWindow {
                     let statusBar = UIView(frame: keyWindow.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero)
                     statusBar.backgroundColor = backgourndColor
@@ -68,7 +65,21 @@ struct MainView: View {
                     statusBar.backgroundColor = backgourndColor
                 }
             }
-            navi.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
+            
+            
+            if #available(iOS 15.0, *) {
+                let navigationBarAppearance = UINavigationBarAppearance()
+                navigationBarAppearance.configureWithTransparentBackground()
+                navigationBarAppearance.backgroundColor = backgourndColor
+                navigationBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
+                navi.navigationBar.standardAppearance = navigationBarAppearance
+                navi.navigationBar.compactAppearance = navigationBarAppearance
+                navi.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+            }else{
+                navi.navigationBar.tintColor = titleColor
+                navi.navigationBar.backgroundColor = backgourndColor
+                navi.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
+            }
         }
     }
     

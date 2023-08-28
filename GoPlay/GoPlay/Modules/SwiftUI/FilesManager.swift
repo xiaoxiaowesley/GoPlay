@@ -13,6 +13,7 @@ class FilesManager: NSObject, UIDocumentPickerDelegate {
     
     static let shared = FilesManager()
     
+    private var action: (([URL]) -> Void)?
     private override init() {
         // Initialize any necessary properties
     }
@@ -21,11 +22,11 @@ class FilesManager: NSObject, UIDocumentPickerDelegate {
         guard let selectedFileURL = urls.first else {
             return
         }
-        
-        // 在这里可以使用 selectedFileURL 来访问所选文件的内容
+        action?(urls)
     }
     
-    func openFileButtonTapped(viewController:UIViewController) {
+    func openFiles(viewController:UIViewController, action: @escaping ([URL]) -> Void) {
+        self.action = action
         let documentPicker = UIDocumentPickerViewController(documentTypes: ["public.data"], in: .import)
         documentPicker.delegate = self
         documentPicker.allowsMultipleSelection = false

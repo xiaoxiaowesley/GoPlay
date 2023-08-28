@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct AppFolderView: View {
+    let title:String
     let input: [String]
     let buttonAction: () -> Void // Expose the button's click action in the constructor
     
@@ -22,7 +23,7 @@ struct AppFolderView: View {
                 Image(systemName: "externaldrive.fill")
                     .renderingMode(.template)
                     .foregroundColor(.blue)
-                Text("应用文件夹")
+                Text(title)
                 Spacer()
                 Image(systemName: "arrow.clockwise")
                     .renderingMode(.template)
@@ -40,7 +41,7 @@ struct AppFolderView: View {
         }
         
         .onAppear {
-//            isAnimating = true // Start the animation when the view appears
+            //            isAnimating = true // Start the animation when the view appears
         }
     }
 }

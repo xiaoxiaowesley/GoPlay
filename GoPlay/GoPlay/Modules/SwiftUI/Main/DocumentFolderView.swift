@@ -9,29 +9,27 @@
 import SwiftUI
 
 struct DocumentFolderView: View {
-    let buttonAction: () -> Void // Expose the button's click action in the constructor
-
+    let buttonAction: () -> Void
+    let title:String
+    
     var body: some View {
         Button(action: {
-            print("Folder item clicked")
-            //call the buttonAction
             self.buttonAction()
         }) {
             HStack(alignment: .top) {
                 Image(systemName: "folder.fill")
                     .renderingMode(.template)
                     .foregroundColor(.blue)
-                Text("文件")
+                Text(title)
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, maxHeight: 40, alignment: .leading)
-        .padding(.vertical, 2)    
+        .padding(.vertical, 2)
     }
 }
 struct DocumentFolderView_Previews: PreviewProvider {
     static var previews: some View {
-        DocumentFolderView {
-            
-        }
+        DocumentFolderView(buttonAction: {
+        }, title: "文件")
     }
 }

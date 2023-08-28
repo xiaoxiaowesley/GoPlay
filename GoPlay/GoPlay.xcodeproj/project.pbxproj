@@ -28,6 +28,7 @@
 		1E33E8522A78D90E00C32830 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E84B2A78D90D00C32830 /* libavformat.a */; };
 		1E33E8532A78D90E00C32830 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E84C2A78D90D00C32830 /* libavutil.a */; };
 		1E33E8542A78D90E00C32830 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E84D2A78D90D00C32830 /* libswscale.a */; };
+		1EAD7B772A9CBB6E009397C3 /* FilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD7B762A9CBB6E009397C3 /* FilesManager.swift */; };
 		1EEBE4452A9C5CE000950E77 /* FolderTypeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE4412A9C5CE000950E77 /* FolderTypeList.swift */; };
 		1EEBE4462A9C5CE000950E77 /* AppFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE4422A9C5CE000950E77 /* AppFolderView.swift */; };
 		1EEBE4472A9C5CE000950E77 /* DocumentFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE4432A9C5CE000950E77 /* DocumentFolderView.swift */; };
@@ -323,6 +324,7 @@
 		1E33E84C2A78D90D00C32830 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = GoPlay/Vendor/FFmpeg/lib/libavutil.a; sourceTree = "<group>"; };
 		1E33E84D2A78D90D00C32830 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = GoPlay/Vendor/FFmpeg/lib/libswscale.a; sourceTree = "<group>"; };
 		1E461AD12A93BC9B00BBC924 /* GoPlay-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GoPlay-Bridging-Header.h"; sourceTree = "<group>"; };
+		1EAD7B762A9CBB6E009397C3 /* FilesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesManager.swift; sourceTree = "<group>"; };
 		1EEBE4412A9C5CE000950E77 /* FolderTypeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTypeList.swift; sourceTree = "<group>"; };
 		1EEBE4422A9C5CE000950E77 /* AppFolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFolderView.swift; sourceTree = "<group>"; };
 		1EEBE4432A9C5CE000950E77 /* DocumentFolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentFolderView.swift; sourceTree = "<group>"; };
@@ -888,6 +890,7 @@
 				0008D4EA2A9B9C7D0061DEF5 /* FlatUI */,
 				00BF9F062A81577100CFF4DB /* ListView.swift */,
 				0008D4F32A9B9CF80061DEF5 /* MainViewInterface.swift */,
+				1EAD7B762A9CBB6E009397C3 /* FilesManager.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -1581,6 +1584,7 @@
 				C44283922281684500A01637 /* RACEmptySequence.m in Sources */,
 				C442837F2281684500A01637 /* RACSignal.m in Sources */,
 				C44283B22281684500A01637 /* UISegmentedControl+RACSignalSupport.m in Sources */,
+				1EAD7B772A9CBB6E009397C3 /* FilesManager.swift in Sources */,
 				C44284022281698600A01637 /* BitBuffer.cpp in Sources */,
 				C44284062281699800A01637 /* FFPacketQueue.m in Sources */,
 				C44283B92281684500A01637 /* NSInvocation+RACTypeParsing.m in Sources */,

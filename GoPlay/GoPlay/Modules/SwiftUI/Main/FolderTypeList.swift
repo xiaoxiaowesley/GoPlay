@@ -11,15 +11,15 @@ import SwiftUI
 struct FolderTypeList: View {
     @EnvironmentObject var hostingProvider: ViewControllerProvider
 
-    
+
     var body: some View {
         List {
             AppFolderView(input: ["String.txt","hello.mp4","hello.mp4","hello.mp4"]) {
                 
             }
-            DocumentFolderView {
-                
-            }
+            DocumentFolderView(buttonAction: {
+                FilesManager.shared.openFileButtonTapped(viewController: hostingProvider.viewController!)
+            }, title: "文件")
         }
     }
 }

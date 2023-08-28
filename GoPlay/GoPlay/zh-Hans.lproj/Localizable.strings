@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  GoPlay
+
+  Created by xiaoxiang's m1 mbp on 2023/8/28.
+  Copyright © 2023 dKingbin. All rights reserved.
+*/
+
+"ApplicationFolder" = "应用文件夹";
+"FilesFolder"="文件";

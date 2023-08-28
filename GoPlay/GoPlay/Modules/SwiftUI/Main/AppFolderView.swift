@@ -9,21 +9,47 @@
 import SwiftUI
 
 struct AppFolderView: View {
+    let input: [String]
+    
+    @State private var showView = false
+    @State private var rotationAngle: Double = 0
+    
+    
     var body: some View {
-
         Button(action: {
             print("Folder item clicked")
+            
+            showView.toggle()
+            withAnimation(.easeInOut(duration: 0.3)) {
+                rotationAngle += 180
+            }
+            rotationAngle = showView ? 180 : 0
+            
         }) {
             HStack(alignment: .top) {
-                Image(systemName: "doc.on.doc.fill")
+                Image(systemName: "externaldrive.fill")
                     .renderingMode(.template)
                     .foregroundColor(.blue)
                 Text("应用文件夹")
+                Spacer()
+                Image(systemName: "arrow.clockwise")
+                    .renderingMode(.template)
+                    .foregroundColor(.blue)
+                    .rotationEffect(Angle(degrees: rotationAngle))
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, maxHeight: 40, alignment: .leading)
         .padding(.vertical, 2)
         
+        
+        // foreach input to generate multi row
+        ForEach(input, id: \.self) { item in
+            Text(item).frame(height:30, alignment: .center)
+        }
+        
+        .onAppear {
+//            isAnimating = true // Start the animation when the view appears
+        }
     }
 }
 //
@@ -32,3 +58,4 @@ struct AppFolderView: View {
 //        AppFolderView()
 //    }
 //}
+

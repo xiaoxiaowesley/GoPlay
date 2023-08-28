@@ -21,7 +21,8 @@ struct DocumentFolderView: View {
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, maxHeight: 40, alignment: .leading)
-        .padding(.vertical, 2)    }
+        .padding(.vertical, 2)    
+    }
 }
 
 struct DocumentFolderView_Previews: PreviewProvider {

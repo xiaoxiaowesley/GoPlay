@@ -14,39 +14,9 @@ struct FolderTypeList: View {
     
     var body: some View {
         List {
-            AppFolderView()
+            AppFolderView(input: ["String.txt","hello.mp4","hello.mp4","hello.mp4"])
+                .background(FUColors.wetAsphalt)
             DocumentFolderView()
-        } .onAppear {
-            updateNaviBarColor(title: Color.white, background: FUColors.turquoise)
-        }
-    }
-   
-    
-    
-    func updateNaviBarColor(title:Color,background:Color){
-        
-        let controller = hostingProvider.viewController
-        
-        if let navi = controller?.navigationController {
-                            
-            let backgourndColor = UIColor(background)
-            let titleColor = UIColor(title)
-            
-            
-            navi.navigationBar.tintColor = titleColor
-            navi.navigationBar.backgroundColor = backgourndColor
-            if #available(iOS 13.0, *) {
-                if let keyWindow = UIApplication.shared.keyWindow {
-                    let statusBar = UIView(frame: keyWindow.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero)
-                    statusBar.backgroundColor = backgourndColor
-                    keyWindow.addSubview(statusBar)
-                }
-            } else {
-                if let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView {
-                    statusBar.backgroundColor = backgourndColor
-                }
-            }
-            navi.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
         }
     }
 }

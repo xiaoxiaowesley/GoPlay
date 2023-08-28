@@ -10,9 +10,7 @@
 		0008D4EE2A9B9C7D0061DEF5 /* FUColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4EB2A9B9C7D0061DEF5 /* FUColor.swift */; };
 		0008D4EF2A9B9C7D0061DEF5 /* FUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4EC2A9B9C7D0061DEF5 /* FUButton.swift */; };
 		0008D4F02A9B9C7D0061DEF5 /* FUGlyphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4ED2A9B9C7D0061DEF5 /* FUGlyphs.swift */; };
-		0008D4F22A9B9CD30061DEF5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4F12A9B9CD30061DEF5 /* MainView.swift */; };
 		0008D4F42A9B9CF80061DEF5 /* MainViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4F32A9B9CF80061DEF5 /* MainViewInterface.swift */; };
-		0008D4FE2A9BB6F00061DEF5 /* FolderTypeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4FD2A9BB6F00061DEF5 /* FolderTypeList.swift */; };
 		000E22562A7D5A0600072C77 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21D92A7D5A0600072C77 /* libavutil.a */; };
 		000E22572A7D5A0600072C77 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DA2A7D5A0600072C77 /* libavfilter.a */; };
 		000E22582A7D5A0600072C77 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DB2A7D5A0600072C77 /* libavcodec.a */; };
@@ -30,6 +28,10 @@
 		1E33E8522A78D90E00C32830 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E84B2A78D90D00C32830 /* libavformat.a */; };
 		1E33E8532A78D90E00C32830 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E84C2A78D90D00C32830 /* libavutil.a */; };
 		1E33E8542A78D90E00C32830 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E84D2A78D90D00C32830 /* libswscale.a */; };
+		1EEBE4452A9C5CE000950E77 /* FolderTypeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE4412A9C5CE000950E77 /* FolderTypeList.swift */; };
+		1EEBE4462A9C5CE000950E77 /* AppFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE4422A9C5CE000950E77 /* AppFolderView.swift */; };
+		1EEBE4472A9C5CE000950E77 /* DocumentFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE4432A9C5CE000950E77 /* DocumentFolderView.swift */; };
+		1EEBE4482A9C5CE000950E77 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE4442A9C5CE000950E77 /* MainView.swift */; };
 		C44281AA228167EF00A01637 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C44281A9228167EF00A01637 /* AppDelegate.m */; };
 		C44281AD228167EF00A01637 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C44281AC228167EF00A01637 /* ViewController.m */; };
 		C44281B0228167EF00A01637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C44281AE228167EF00A01637 /* Main.storyboard */; };
@@ -191,9 +193,7 @@
 		0008D4EB2A9B9C7D0061DEF5 /* FUColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUColor.swift; sourceTree = "<group>"; };
 		0008D4EC2A9B9C7D0061DEF5 /* FUButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUButton.swift; sourceTree = "<group>"; };
 		0008D4ED2A9B9C7D0061DEF5 /* FUGlyphs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUGlyphs.swift; sourceTree = "<group>"; };
-		0008D4F12A9B9CD30061DEF5 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0008D4F32A9B9CF80061DEF5 /* MainViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInterface.swift; sourceTree = "<group>"; };
-		0008D4FD2A9BB6F00061DEF5 /* FolderTypeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTypeList.swift; sourceTree = "<group>"; };
 		000E21D92A7D5A0600072C77 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
 		000E21DA2A7D5A0600072C77 /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavfilter.a; sourceTree = "<group>"; };
 		000E21DB2A7D5A0600072C77 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavcodec.a; sourceTree = "<group>"; };
@@ -323,6 +323,10 @@
 		1E33E84C2A78D90D00C32830 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = GoPlay/Vendor/FFmpeg/lib/libavutil.a; sourceTree = "<group>"; };
 		1E33E84D2A78D90D00C32830 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = GoPlay/Vendor/FFmpeg/lib/libswscale.a; sourceTree = "<group>"; };
 		1E461AD12A93BC9B00BBC924 /* GoPlay-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GoPlay-Bridging-Header.h"; sourceTree = "<group>"; };
+		1EEBE4412A9C5CE000950E77 /* FolderTypeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTypeList.swift; sourceTree = "<group>"; };
+		1EEBE4422A9C5CE000950E77 /* AppFolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFolderView.swift; sourceTree = "<group>"; };
+		1EEBE4432A9C5CE000950E77 /* DocumentFolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentFolderView.swift; sourceTree = "<group>"; };
+		1EEBE4442A9C5CE000950E77 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C44281A5228167EF00A01637 /* GoPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44281A8228167EF00A01637 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C44281A9228167EF00A01637 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -880,13 +884,23 @@
 		00BF9F042A81575B00CFF4DB /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				0008D4FD2A9BB6F00061DEF5 /* FolderTypeList.swift */,
+				1EEBE4402A9C5CE000950E77 /* Main */,
 				0008D4EA2A9B9C7D0061DEF5 /* FlatUI */,
-				0008D4F12A9B9CD30061DEF5 /* MainView.swift */,
 				00BF9F062A81577100CFF4DB /* ListView.swift */,
 				0008D4F32A9B9CF80061DEF5 /* MainViewInterface.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		1EEBE4402A9C5CE000950E77 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1EEBE4412A9C5CE000950E77 /* FolderTypeList.swift */,
+				1EEBE4422A9C5CE000950E77 /* AppFolderView.swift */,
+				1EEBE4432A9C5CE000950E77 /* DocumentFolderView.swift */,
+				1EEBE4442A9C5CE000950E77 /* MainView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		C442819C228167EF00A01637 = {
@@ -1516,14 +1530,16 @@
 				C44284032281698600A01637 /* FFUtil.mm in Sources */,
 				C44283872281684500A01637 /* RACStream.m in Sources */,
 				C44283972281684500A01637 /* NSURLConnection+RACSupport.m in Sources */,
-				0008D4FE2A9BB6F00061DEF5 /* FolderTypeList.swift in Sources */,
 				C44283AF2281684500A01637 /* NSArray+RACSequenceAdditions.m in Sources */,
+				1EEBE4472A9C5CE000950E77 /* DocumentFolderView.swift in Sources */,
+				1EEBE4462A9C5CE000950E77 /* AppFolderView.swift in Sources */,
 				C442848D228172B900A01637 /* MASViewAttribute.m in Sources */,
 				C44283D12281684500A01637 /* RACTuple.m in Sources */,
 				C44283A72281684500A01637 /* RACSignalProvider.d in Sources */,
 				C44283BA2281684500A01637 /* NSSet+RACSequenceAdditions.m in Sources */,
 				C442848A228172B900A01637 /* View+MASAdditions.m in Sources */,
 				C44283FA2281696E00A01637 /* FFAudioDecoder.m in Sources */,
+				1EEBE4482A9C5CE000950E77 /* MainView.swift in Sources */,
 				C4428486228172B900A01637 /* MASCompositeConstraint.m in Sources */,
 				C44283852281684500A01637 /* RACIndexSetSequence.m in Sources */,
 				C442838E2281684500A01637 /* RACChannel.m in Sources */,
@@ -1613,7 +1629,6 @@
 				C44283C72281684500A01637 /* NSObject+RACKVOWrapper.m in Sources */,
 				C4428485228172B900A01637 /* ViewController+MASAdditions.m in Sources */,
 				C4428484228172B900A01637 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				0008D4F22A9B9CD30061DEF5 /* MainView.swift in Sources */,
 				C44283792281684500A01637 /* UIStepper+RACSignalSupport.m in Sources */,
 				C442838C2281684500A01637 /* MKAnnotationView+RACSignalSupport.m in Sources */,
 				C4428456228171C600A01637 /* UITabBarController+Autorotate.m in Sources */,
@@ -1663,6 +1678,7 @@
 				C44284682281726600A01637 /* ColorUtil.m in Sources */,
 				C442839D2281684500A01637 /* UIControl+RACSignalSupportPrivate.m in Sources */,
 				C44283AC2281684500A01637 /* RACScopedDisposable.m in Sources */,
+				1EEBE4452A9C5CE000950E77 /* FolderTypeList.swift in Sources */,
 				C44283C62281684500A01637 /* RACSubject.m in Sources */,
 				C44283C02281684500A01637 /* NSString+RACKeyPathUtilities.m in Sources */,
 				C44283832281684500A01637 /* NSUserDefaults+RACSupport.m in Sources */,
@@ -1810,8 +1826,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3T22C9YP6X;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 43Y657P48S;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/GoPlay/Vendor/FFmpeg/include/libavformat\"",
 					"\"$(SRCROOT)/GoPlay/Vendor/FFmpeg/include\"",
@@ -1830,6 +1848,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoxiao.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Xianyu Profile For Everything";
 				SWIFT_OBJC_BRIDGING_HEADER = "GoPlay/GoPlay-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;

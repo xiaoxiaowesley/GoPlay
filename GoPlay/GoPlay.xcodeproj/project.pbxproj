@@ -19,7 +19,6 @@
 		000E225B2A7D5A0600072C77 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DE2A7D5A0600072C77 /* libswresample.a */; };
 		000E225C2A7D5A0600072C77 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DF2A7D5A0600072C77 /* libswscale.a */; };
 		00A4511A2A8A91A4003903F3 /* FFmpegUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A451192A8A91A4003903F3 /* FFmpegUtil.m */; };
-		00BF9F072A81577100CFF4DB /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF9F062A81577100CFF4DB /* ListView.swift */; };
 		00BF9F092A81585300CFF4DB /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */; };
 		1E33E84E2A78D90D00C32830 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E8472A78D90D00C32830 /* libswresample.a */; };
 		1E33E84F2A78D90E00C32830 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E8482A78D90D00C32830 /* libavcodec.a */; };
@@ -315,7 +314,6 @@
 		000E22552A7D5A0600072C77 /* swresample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swresample.h; sourceTree = "<group>"; };
 		00A451182A8A91A4003903F3 /* FFmpegUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFmpegUtil.h; sourceTree = "<group>"; };
 		00A451192A8A91A4003903F3 /* FFmpegUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFmpegUtil.m; sourceTree = "<group>"; };
-		00BF9F062A81577100CFF4DB /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewController.swift; sourceTree = "<group>"; };
 		1E33E8472A78D90D00C32830 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = GoPlay/Vendor/FFmpeg/lib/libswresample.a; sourceTree = "<group>"; };
 		1E33E8482A78D90D00C32830 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = GoPlay/Vendor/FFmpeg/lib/libavcodec.a; sourceTree = "<group>"; };
@@ -893,7 +891,6 @@
 			children = (
 				1EEBE4402A9C5CE000950E77 /* Main */,
 				0008D4EA2A9B9C7D0061DEF5 /* FlatUI */,
-				00BF9F062A81577100CFF4DB /* ListView.swift */,
 				0008D4F32A9B9CF80061DEF5 /* MainViewInterface.swift */,
 				1EAD7B762A9CBB6E009397C3 /* FilesManager.swift */,
 			);
@@ -1601,7 +1598,6 @@
 				C442839B2281684500A01637 /* UIImagePickerController+RACSignalSupport.m in Sources */,
 				C44284932281730B00A01637 /* VideoView.m in Sources */,
 				C4428420228169F300A01637 /* FFGLProgram.m in Sources */,
-				00BF9F072A81577100CFF4DB /* ListView.swift in Sources */,
 				C4428487228172B900A01637 /* MASConstraintMaker.m in Sources */,
 				C442839E2281684500A01637 /* NSObject+RACDeallocating.m in Sources */,
 				C44283AD2281684500A01637 /* RACDynamicSignal.m in Sources */,
@@ -1851,10 +1847,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 43Y657P48S;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3T22C9YP6X;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/GoPlay/Vendor/FFmpeg/include/libavformat\"",
 					"\"$(SRCROOT)/GoPlay/Vendor/FFmpeg/include\"",
@@ -1875,7 +1869,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoxiao.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Xianyu Profile For Everything";
 				SWIFT_OBJC_BRIDGING_HEADER = "GoPlay/GoPlay-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;

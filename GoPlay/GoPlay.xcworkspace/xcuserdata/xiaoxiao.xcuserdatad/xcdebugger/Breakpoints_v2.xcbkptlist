@@ -20,7 +20,7 @@
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "C8797592-FA9F-48D8-AA0F-E65CA0ADEC55 - b0fc4a97c6d4fdd"
+                  uuid = "C8797592-FA9F-48D8-AA0F-E65CA0ADEC55 - b0fc4a97c6d4e25"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -30,12 +30,12 @@
                   urlString = "file:///Users/xiaoxiao/Documents/code/GoPlay/GoPlay/GoPlay/Modules/SwiftUI/Main/AppFolderView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "1064">
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "212">
                </Location>
                <Location
-                  uuid = "C8797592-FA9F-48D8-AA0F-E65CA0ADEC55 - 31d8de76227dc98"
+                  uuid = "C8797592-FA9F-48D8-AA0F-E65CA0ADEC55 - 31d8de76227dd90"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,8 +45,8 @@
                   urlString = "file:///Users/xiaoxiao/Documents/code/GoPlay/GoPlay/GoPlay/Modules/SwiftUI/Main/AppFolderView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
                   offsetFromSymbolStart = "256">
                </Location>
             </Locations>
@@ -64,22 +64,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
             endingLineNumber = "55"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7FA8F7F4-5957-4A05-A385-3ECBB925B94A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoPlay/Modules/SwiftUI/Main/AppFolderView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>

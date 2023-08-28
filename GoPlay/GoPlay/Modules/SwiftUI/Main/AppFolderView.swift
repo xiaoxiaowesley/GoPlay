@@ -79,7 +79,15 @@ struct AppFolderView: View {
             
         }
         ForEach(input, id: \.self) { item in
-            Text(item.filename)
+            Button(action: {
+                let player = PlayViewController()
+                player.url = item.fullpath
+                let nav = UIApplication.shared.windows.first?.rootViewController as? UINavigationController
+                nav?.pushViewController(player, animated: true)
+
+            }){
+                Text(item.filename)
+            }
         }
     }
     

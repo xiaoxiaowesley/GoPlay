@@ -10,22 +10,14 @@ import SwiftUI
 
 struct AppFolderView: View {
     let input: [String]
+    let buttonAction: () -> Void // Expose the button's click action in the constructor
     
     @State private var showView = false
     @State private var rotationAngle: Double = 0
     
     
     var body: some View {
-        Button(action: {
-            print("Folder item clicked")
-            
-            showView.toggle()
-            withAnimation(.easeInOut(duration: 0.3)) {
-                rotationAngle += 180
-            }
-            rotationAngle = showView ? 180 : 0
-            
-        }) {
+        Button(action: buttonAction) { // Use the exposed button action
             HStack(alignment: .top) {
                 Image(systemName: "externaldrive.fill")
                     .renderingMode(.template)

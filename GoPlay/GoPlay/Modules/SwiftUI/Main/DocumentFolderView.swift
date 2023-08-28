@@ -9,9 +9,13 @@
 import SwiftUI
 
 struct DocumentFolderView: View {
+    let buttonAction: () -> Void // Expose the button's click action in the constructor
+
     var body: some View {
         Button(action: {
             print("Folder item clicked")
+            //call the buttonAction
+            self.buttonAction()
         }) {
             HStack(alignment: .top) {
                 Image(systemName: "folder.fill")
@@ -24,9 +28,10 @@ struct DocumentFolderView: View {
         .padding(.vertical, 2)    
     }
 }
-
 struct DocumentFolderView_Previews: PreviewProvider {
     static var previews: some View {
-        DocumentFolderView()
+        DocumentFolderView {
+            
+        }
     }
 }

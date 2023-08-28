@@ -14,9 +14,12 @@ struct FolderTypeList: View {
     
     var body: some View {
         List {
-            AppFolderView(input: ["String.txt","hello.mp4","hello.mp4","hello.mp4"])
-                .background(FUColors.wetAsphalt)
-            DocumentFolderView()
+            AppFolderView(input: ["String.txt","hello.mp4","hello.mp4","hello.mp4"]) {
+                
+            }
+            DocumentFolderView {
+                
+            }
         }
     }
 }

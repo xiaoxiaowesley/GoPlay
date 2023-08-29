@@ -43,17 +43,18 @@ struct AppFolderView: View {
     var body: some View {
         Button(action: {
             buttonAction();
-//            isAnimating.toggle() // Toggle the animation state when the button is clicked
-        }) { // Use the exposed button action
+        })
+        { // Use the exposed button action
             HStack(alignment: .top) {
                 Image(systemName: "externaldrive.fill")
                     .renderingMode(.template)
-                    .foregroundColor(.blue)
+                    .foregroundColor(FUColors.todo)
                 Text(title)
+                    .foregroundColor(.white)
                 Spacer()
                 Image(systemName: "arrow.right.circle.fill")
                     .renderingMode(.template)
-                    .foregroundColor(.blue)
+                    .foregroundColor(FUColors.todo)
                 
             }
         }
@@ -67,6 +68,7 @@ struct AppFolderView: View {
                 
                 if self.input.count == 0 {
                     self.input.append(DataObject(filename: "big_buck_bunny.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"))
+                    self.input.append(DataObject(filename: "clips.vorwaerts-gmbh.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"))
                 }
                 DispatchQueue.main.async {
                     isLoading = false
@@ -75,21 +77,15 @@ struct AppFolderView: View {
         }
         HStack {
             Image(systemName: "ellipsis")
-                .foregroundColor(.blue)
+                .foregroundColor(FUColors.todo)
             Text("最近导入")
-                .foregroundColor(.blue)
+                .foregroundColor(.white)
             Spacer()
             Button(action: {
-                // Refresh button action
+                // 刷新
             }) {
                 Image(systemName: "arrow.clockwise")
-                    .foregroundColor(.blue)
-            }
-            Button(action: {
-                // Select button action
-            }) {
-                Image(systemName: "checkmark.circle")
-                    .foregroundColor(.blue)
+                    .foregroundColor(FUColors.todo)
             }
         }
         VStack {
@@ -100,10 +96,10 @@ struct AppFolderView: View {
                     let nav = UIApplication.shared.windows.first?.rootViewController as? UINavigationController
                     nav?.pushViewController(player, animated: true)
                 }) {
-                    Text(item.filename)
+                    Text(item.filename).foregroundColor(.white)
                 }
             }
-        }.background(Color.gray) // Adjust background color to gray
+        }
     }
     
     func fetchVideoFiles() -> [DataObject] {

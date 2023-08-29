@@ -18,28 +18,22 @@ struct FolderTypeList: View {
     var body: some View {
         List {
             Section {
-                AppFolderView(title: NSLocalizedString("ApplicationFolder", comment: "The sandbox document folder")) {
-                    
-                }
-            } footer: {
-                Text("this is footer")
+                AppFolderView(title: NSLocalizedString("ApplicationFolder", comment: "The sandbox document folder")) {                    
+                }.listRowBackground(FUColors.wetAsphalt)
             }
-
-            
-//            Section(header: Spacer(minLength: 0)) {} // Adjust minLength to your preference for spacing
-            
             Section {
                 DocumentFolderView(buttonAction: {
                     FilesManager.shared.openFiles(viewController: hostingProvider.viewController!, action: {( urls: [URL]) -> Void in
                         
                     })
                 }, title: NSLocalizedString("FilesFolder", comment: "iOS system Files application"))
+                .listRowBackground(FUColors.wetAsphalt)
             }
             
             
         }.onAppear(){
             
-        }.listStyle(.grouped)
+        }
     }
     
 }

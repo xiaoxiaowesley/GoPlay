@@ -31,4 +31,6 @@ struct FUColors {
     static let silver =  Color(red: 189/255, green: 195/255, blue: 199/255)
     static let concrete =  Color(red: 149/255, green: 165/255, blue: 166/255)
     static let asbestos =  Color(red: 127/255, green: 140/255, blue: 141/255)
+    
+    static let todo = Color(red: 121/255, green: 135/255, blue: 149/255)
 }

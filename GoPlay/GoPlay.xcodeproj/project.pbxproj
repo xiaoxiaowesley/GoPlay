@@ -11,6 +11,7 @@
 		0008D4EF2A9B9C7D0061DEF5 /* FUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4EC2A9B9C7D0061DEF5 /* FUButton.swift */; };
 		0008D4F02A9B9C7D0061DEF5 /* FUGlyphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4ED2A9B9C7D0061DEF5 /* FUGlyphs.swift */; };
 		0008D4F42A9B9CF80061DEF5 /* MainViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008D4F32A9B9CF80061DEF5 /* MainViewInterface.swift */; };
+		000CD6BE2A9E55450097960C /* flat-ui-pro-icons-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 000CD6BD2A9E55440097960C /* flat-ui-pro-icons-regular.ttf */; };
 		000E22562A7D5A0600072C77 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21D92A7D5A0600072C77 /* libavutil.a */; };
 		000E22572A7D5A0600072C77 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DA2A7D5A0600072C77 /* libavfilter.a */; };
 		000E22582A7D5A0600072C77 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DB2A7D5A0600072C77 /* libavcodec.a */; };
@@ -195,6 +196,7 @@
 		0008D4EC2A9B9C7D0061DEF5 /* FUButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUButton.swift; sourceTree = "<group>"; };
 		0008D4ED2A9B9C7D0061DEF5 /* FUGlyphs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUGlyphs.swift; sourceTree = "<group>"; };
 		0008D4F32A9B9CF80061DEF5 /* MainViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInterface.swift; sourceTree = "<group>"; };
+		000CD6BD2A9E55440097960C /* flat-ui-pro-icons-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "flat-ui-pro-icons-regular.ttf"; sourceTree = "<group>"; };
 		000E21D92A7D5A0600072C77 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
 		000E21DA2A7D5A0600072C77 /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavfilter.a; sourceTree = "<group>"; };
 		000E21DB2A7D5A0600072C77 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavcodec.a; sourceTree = "<group>"; };
@@ -692,11 +694,20 @@
 		0008D4EA2A9B9C7D0061DEF5 /* FlatUI */ = {
 			isa = PBXGroup;
 			children = (
+				000CD6BC2A9E55440097960C /* font */,
 				0008D4EB2A9B9C7D0061DEF5 /* FUColor.swift */,
 				0008D4EC2A9B9C7D0061DEF5 /* FUButton.swift */,
 				0008D4ED2A9B9C7D0061DEF5 /* FUGlyphs.swift */,
 			);
 			path = FlatUI;
+			sourceTree = "<group>";
+		};
+		000CD6BC2A9E55440097960C /* font */ = {
+			isa = PBXGroup;
+			children = (
+				000CD6BD2A9E55440097960C /* flat-ui-pro-icons-regular.ttf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 		000E21D82A7D5A0600072C77 /* lib */ = {
@@ -1522,6 +1533,7 @@
 			files = (
 				C44281B5228167EF00A01637 /* LaunchScreen.storyboard in Resources */,
 				1EAD7B7C2A9CC503009397C3 /* Localizable.strings in Resources */,
+				000CD6BE2A9E55450097960C /* flat-ui-pro-icons-regular.ttf in Resources */,
 				C44281B2228167EF00A01637 /* Assets.xcassets in Resources */,
 				C44281B0228167EF00A01637 /* Main.storyboard in Resources */,
 			);

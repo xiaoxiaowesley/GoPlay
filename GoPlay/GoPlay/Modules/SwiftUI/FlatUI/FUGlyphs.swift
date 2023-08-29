@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Glyphs{
+struct FUGlyphs{
     static let info_circle = "\u{e600}"
     static let alert_circle = "\u{e601}"
     static let question_circle = "\u{e602}"

@@ -43,5 +43,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>flat-ui-pro-icons-regular.ttf</string>
+	</array>
 </dict>
 </plist>

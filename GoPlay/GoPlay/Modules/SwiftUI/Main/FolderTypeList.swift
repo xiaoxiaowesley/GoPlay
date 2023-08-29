@@ -17,25 +17,36 @@ struct FolderTypeList: View {
     
     var body: some View {
         List {
-          
-            AppFolderView(title: NSLocalizedString("ApplicationFolder", comment: "The sandbox document folder")) {
-                
-            }
-            DocumentFolderView(buttonAction: {
-                FilesManager.shared.openFiles(viewController: hostingProvider.viewController!, action: {( urls: [URL]) -> Void in
+            Section {
+                AppFolderView(title: NSLocalizedString("ApplicationFolder", comment: "The sandbox document folder")) {
                     
-                })
-            }, title: NSLocalizedString("FilesFolder", comment: "iOS system Files application"))
+                }
+            } footer: {
+                Text("this is footer")
+            }
+
+            
+//            Section(header: Spacer(minLength: 0)) {} // Adjust minLength to your preference for spacing
+            
+            Section {
+                DocumentFolderView(buttonAction: {
+                    FilesManager.shared.openFiles(viewController: hostingProvider.viewController!, action: {( urls: [URL]) -> Void in
+                        
+                    })
+                }, title: NSLocalizedString("FilesFolder", comment: "iOS system Files application"))
+            }
+            
+            
         }.onAppear(){
             
-        }
+        }.listStyle(.grouped)
     }
     
 }
-//
-//struct FolderTypeList_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FolderTypeList()
-//    }
-//}
-//
+
+struct FolderTypeList_Previews: PreviewProvider {
+    static var previews: some View {
+        FolderTypeList()
+    }
+}
+

@@ -89,6 +89,7 @@ struct MainView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+        .environmentObject(ViewControllerProvider())
     }
 }
 
@@ -106,3 +107,4 @@ extension View {
 final class ViewControllerProvider: ObservableObject {
     fileprivate(set) weak var viewController: UIViewController?
 }
+

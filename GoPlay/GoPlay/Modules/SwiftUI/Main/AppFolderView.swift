@@ -43,7 +43,7 @@ struct AppFolderView: View {
     var body: some View {
         Button(action: {
             buttonAction();
-            isAnimating.toggle() // Toggle the animation state when the button is clicked
+//            isAnimating.toggle() // Toggle the animation state when the button is clicked
         }) { // Use the exposed button action
             HStack(alignment: .top) {
                 Image(systemName: "externaldrive.fill")
@@ -51,16 +51,9 @@ struct AppFolderView: View {
                     .foregroundColor(.blue)
                 Text(title)
                 Spacer()
-                Image(systemName: "slowmo")
+                Image(systemName: "arrow.right.circle.fill")
                     .renderingMode(.template)
                     .foregroundColor(.blue)
-                    .rotationEffect(Angle(degrees: rotationAngle))
-                    .onAppear {
-                        withAnimation(Animation.linear(duration: 1).repeatForever(autoreverses: false)) {
-                            rotationAngle = 360
-                        }
-                    }
-                    .rotationEffect(Angle(degrees: isAnimating ? rotationAngle : 0)) // Apply rotation effect based on the animation state
                 
             }
         }
@@ -68,7 +61,6 @@ struct AppFolderView: View {
         .padding(.vertical, 2)
         .onAppear {
             print("onAppear")
-            
             isLoading = true
             DispatchQueue.global(qos: .background).async {
                 self.input = fetchVideoFiles()
@@ -80,19 +72,38 @@ struct AppFolderView: View {
                     isLoading = false
                 }
             }
-            
         }
-        ForEach(input, id: \.self) { item in
+        HStack {
+            Image(systemName: "ellipsis")
+                .foregroundColor(.blue)
+            Text("最近导入")
+                .foregroundColor(.blue)
+            Spacer()
             Button(action: {
-                let player = PlayViewController()
-                player.url = item.fullpath
-                let nav = UIApplication.shared.windows.first?.rootViewController as? UINavigationController
-                nav?.pushViewController(player, animated: true)
-
-            }){
-                Text(item.filename)
+                // Refresh button action
+            }) {
+                Image(systemName: "arrow.clockwise")
+                    .foregroundColor(.blue)
+            }
+            Button(action: {
+                // Select button action
+            }) {
+                Image(systemName: "checkmark.circle")
+                    .foregroundColor(.blue)
             }
         }
+        VStack {
+            ForEach(input, id: \.self) { item in
+                Button(action: {
+                    let player = PlayViewController()
+                    player.url = item.fullpath
+                    let nav = UIApplication.shared.windows.first?.rootViewController as? UINavigationController
+                    nav?.pushViewController(player, animated: true)
+                }) {
+                    Text(item.filename)
+                }
+            }
+        }.background(Color.gray) // Adjust background color to gray
     }
     
     func fetchVideoFiles() -> [DataObject] {
@@ -110,10 +121,12 @@ struct AppFolderView: View {
         return []
     }
 }
-//
-//struct AppFolderView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AppFolderView()
-//    }
-//}
+
+struct AppFolderView_Previews: PreviewProvider {
+    static var previews: some View {
+        AppFolderView(title: NSLocalizedString("ApplicationFolder", comment: "The sandbox document folder")) {
+            
+        }
+    }
+}
 

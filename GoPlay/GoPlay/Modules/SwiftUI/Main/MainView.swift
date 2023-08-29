@@ -21,7 +21,7 @@ struct MainView: View {
                 updateTitle(title: "Page One")
             }
             .tabItem {
-                Image(systemName: "1.circle")
+                Image(systemName: "play.fill")
                 Text("Page 1")
             }
             VStack{
@@ -30,7 +30,7 @@ struct MainView: View {
                 updateTitle(title: "Page Two")
             }
             .tabItem {
-                Image(systemName: "2.circle")
+                Image(systemName: "person.fill")
                 Text("Page 2")
             }
         }
@@ -53,18 +53,18 @@ struct MainView: View {
             let backgourndColor = UIColor(background)
             let titleColor = UIColor(title)
             
-            
-             if #available(iOS 13.0, *) {
-                if let keyWindow = UIApplication.shared.keyWindow {
-                    let statusBar = UIView(frame: keyWindow.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero)
-                    statusBar.backgroundColor = backgourndColor
-                    keyWindow.addSubview(statusBar)
-                }
-            } else {
-                if let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView {
-                    statusBar.backgroundColor = backgourndColor
-                }
-            }
+//
+//             if #available(iOS 13.0, *) {
+//                if let keyWindow = UIApplication.shared.keyWindow {
+//                    let statusBar = UIView(frame: keyWindow.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero)
+//                    statusBar.backgroundColor = backgourndColor
+//                    keyWindow.addSubview(statusBar)
+//                }
+//            } else {
+//                if let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView {
+//                    statusBar.backgroundColor = backgourndColor
+//                }
+//            }
             
             
             if #available(iOS 15.0, *) {

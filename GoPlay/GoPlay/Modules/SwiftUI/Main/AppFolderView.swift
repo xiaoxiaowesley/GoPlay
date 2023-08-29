@@ -51,7 +51,7 @@ struct AppFolderView: View {
                     .foregroundColor(.blue)
                 Text(title)
                 Spacer()
-                Image(systemName: "arrow.clockwise")
+                Image(systemName: "slowmo")
                     .renderingMode(.template)
                     .foregroundColor(.blue)
                     .rotationEffect(Angle(degrees: rotationAngle))
@@ -72,6 +72,10 @@ struct AppFolderView: View {
             isLoading = true
             DispatchQueue.global(qos: .background).async {
                 self.input = fetchVideoFiles()
+                
+                if self.input.count == 0 {
+                    self.input.append(DataObject(filename: "big_buck_bunny.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"))
+                }
                 DispatchQueue.main.async {
                     isLoading = false
                 }

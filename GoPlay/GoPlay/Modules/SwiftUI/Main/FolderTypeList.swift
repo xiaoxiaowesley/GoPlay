@@ -33,7 +33,7 @@ struct FolderTypeList: View {
             
         }.onAppear(){
             
-        }
+        }.listStyle(.insetGrouped)
     }
     
 }

@@ -26,16 +26,19 @@
 		[UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
 		[UINavigationBar appearance].translucent = NO;
 	}
-
-	[[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    
+    UINavigationBarAppearance *newNavBarAppearance = [self customNavBarAppearance];
+    UINavigationBar *appearance = [UINavigationBar appearance];
+    appearance.scrollEdgeAppearance = newNavBarAppearance;
+    appearance.compactAppearance = newNavBarAppearance;
+    appearance.standardAppearance = newNavBarAppearance;
+    if (@available(iOS 15.0, *)) {
+        appearance.compactScrollEdgeAppearance = newNavBarAppearance;
+    }
     
     UIViewController *vc = [[MainViewInterface new] makeShipDetailsUI:@"Sarita"];
     
-//    ViewController * vc2 = [[ViewController alloc]init];
 	UINavigationController* navc = [[UINavigationController alloc]initWithRootViewController:vc];
-    
-    navc.navigationBar.tintColor = [UIColor redColor];
-    
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window.backgroundColor = [UIColor whiteColor];
 	self.window.rootViewController = navc;
@@ -44,6 +47,31 @@
 	return YES;
 }
 
+-(UINavigationBarAppearance *)customNavBarAppearance {
+    
+    UIColor *turquoise = [UIColor colorWithRed:26/255.0 green:188/255.0 blue:156/255.0 alpha:1.0];
+
+    
+    UINavigationBarAppearance *customNavBarAppearance = [[UINavigationBarAppearance alloc] init];
+    // Apply a red background.
+    [customNavBarAppearance configureWithOpaqueBackground];
+    customNavBarAppearance.backgroundColor = turquoise;
+
+    // Apply white colored normal and large titles.
+    customNavBarAppearance.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
+    customNavBarAppearance.largeTitleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
+    // Apply white color to all the nav bar buttons.
+    UIBarButtonItemAppearance *barButtonItemAppearance = [[UIBarButtonItemAppearance alloc] initWithStyle:UIBarButtonItemStylePlain];
+    [barButtonItemAppearance.normal setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    [barButtonItemAppearance.disabled setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor lightTextColor]}];
+    [barButtonItemAppearance.highlighted setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor labelColor]}];
+    [barButtonItemAppearance.focused setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    customNavBarAppearance.buttonAppearance = barButtonItemAppearance;
+    customNavBarAppearance.backButtonAppearance = barButtonItemAppearance;
+    customNavBarAppearance.doneButtonAppearance = barButtonItemAppearance;
+
+    return customNavBarAppearance;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

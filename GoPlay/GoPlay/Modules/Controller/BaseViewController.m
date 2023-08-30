@@ -22,6 +22,8 @@
 {
     [super viewDidLoad];
     
+   
+//        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : (UIFont(name: "FONT NAME", size: 18))!, NSForegroundColorAttributeName: UIColor.whiteColor()] }
 	LOG_DEBUG(@"enter -- %@",[self class]);
 }
 

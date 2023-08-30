@@ -48,13 +48,13 @@ struct AppFolderView: View {
             HStack(alignment: .top) {
                 Image(systemName: "externaldrive.fill")
                     .renderingMode(.template)
-                    .foregroundColor(FUColors.todo)
+                    .foregroundColor(.todo)
                 Text(title)
                     .foregroundColor(.white)
                 Spacer()
                 Image(systemName: "arrow.right.circle.fill")
                     .renderingMode(.template)
-                    .foregroundColor(FUColors.todo)
+                    .foregroundColor(.todo)
                 
             }
         }
@@ -77,7 +77,7 @@ struct AppFolderView: View {
         }
         HStack {
             Image(systemName: "ellipsis")
-                .foregroundColor(FUColors.todo)
+                .foregroundColor(.todo)
             Text("最近导入")
                 .foregroundColor(.white)
             Spacer()
@@ -85,7 +85,7 @@ struct AppFolderView: View {
                 // 刷新
             }) {
                 Image(systemName: "arrow.clockwise")
-                    .foregroundColor(FUColors.todo)
+                    .foregroundColor(.todo)
             }
         }
         VStack {

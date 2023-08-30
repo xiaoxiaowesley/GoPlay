@@ -10,7 +10,7 @@ import SwiftUI
 
 
 // 定义颜色常量
-struct FUColors {
+extension Color {
     static let turquoise =  Color(red: 26/255, green: 188/255, blue: 156/255)
     static let greenSea =  Color(red: 22/255, green: 160/255, blue: 133/255)
     static let emerald =  Color(red: 46/255, green: 204/255, blue: 113/255)

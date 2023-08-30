@@ -51,42 +51,42 @@ struct FUButtonStyle: ButtonStyle {
     private var backgroundColor: Color {
         switch type {
         case .primary:
-            return FUColors.turquoise
+            return .turquoise
         case .success:
-            return FUColors.emerald
+            return .emerald
         case .warning:
-            return FUColors.sunFlower
+            return .sunFlower
         case .defaultType:
-            return FUColors.silver
+            return .silver
         case .inverse:
-            return FUColors.wetAsphalt
+            return .wetAsphalt
         case .danger:
-            return FUColors.alizarin
+            return .alizarin
         case .info:
-            return FUColors.peterRiver
+            return .peterRiver
         case .disable:
-            return FUColors.clouds
+            return .clouds
         }
     }
 
     private var pressedBackgroundColor: Color {
         switch type {
         case .primary:
-            return FUColors.greenSea
+            return .greenSea
         case .success:
-            return FUColors.nephritis
+            return .nephritis
         case .warning:
-            return FUColors.orange
+            return .orange
         case .defaultType:
             return Color(red: 161/255, green: 166/255, blue: 169/255)
         case .inverse:
-            return FUColors.midnightBlue
+            return .midnightBlue
         case .danger:
-            return FUColors.pomegranate
+            return .pomegranate
         case .info:
-            return FUColors.peterRiver
+            return .peterRiver
         case .disable:
-            return FUColors.clouds
+            return .clouds
         }
     }
 

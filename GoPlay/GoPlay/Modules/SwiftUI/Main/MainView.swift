@@ -40,7 +40,7 @@ struct MainView: View {
             }
         }
         .onAppear {
-            updateNaviBarColor(title: Color.white, background: FUColors.turquoise)
+            updateNaviBarColor(title: Color.white, background: .turquoise)
         }
     }
     
@@ -53,7 +53,7 @@ struct MainView: View {
         
         let controller = hostingProvider.viewController
         
-        if let navi = controller?.navigationController {            
+        if let navi = controller?.navigationController {
         }
     }
     

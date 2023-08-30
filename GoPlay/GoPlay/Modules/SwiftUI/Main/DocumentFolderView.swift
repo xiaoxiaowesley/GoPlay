@@ -19,7 +19,7 @@ struct DocumentFolderView: View {
             HStack(alignment: .top) {
                 Image(systemName: "folder.fill")
                     .renderingMode(.template)
-                    .foregroundColor(FUColors.todo)
+                    .foregroundColor(.todo)
                 Text(title)
                     .foregroundColor(.white)
 

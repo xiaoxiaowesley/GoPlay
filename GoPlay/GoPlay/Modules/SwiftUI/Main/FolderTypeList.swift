@@ -19,7 +19,7 @@ struct FolderTypeList: View {
         List {
             Section {
                 AppFolderView(title: NSLocalizedString("ApplicationFolder", comment: "The sandbox document folder")) {                    
-                }.listRowBackground(FUColors.wetAsphalt)
+                }.listRowBackground(Color.wetAsphalt)
             }
             Section {
                 DocumentFolderView(buttonAction: {
@@ -27,7 +27,7 @@ struct FolderTypeList: View {
                         
                     })
                 }, title: NSLocalizedString("FilesFolder", comment: "iOS system Files application"))
-                .listRowBackground(FUColors.wetAsphalt)
+                .listRowBackground(Color.wetAsphalt)
             }
             
             

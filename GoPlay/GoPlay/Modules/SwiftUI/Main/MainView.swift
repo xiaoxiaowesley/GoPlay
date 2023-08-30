@@ -15,7 +15,10 @@ struct MainView: View {
         
         TabView {
             VStack{
-                FolderTypeList()
+                
+                   
+                    CustomListView2()
+//                FolderTypeList()
             }
             .onAppear {
                 updateTitle(title: "Page One")
@@ -25,10 +28,33 @@ struct MainView: View {
                 Text("Page 1")
             }
             VStack{
-                Text("\u{e600}\u{e601}\u{e602}\u{e603}\u{e604}\u{e605}\u{e606}\u{e607}\u{e608}\u{e609}\u{e60a}\u{e60b}\u{e60c}\u{e60d}\u{e60e}\u{e60f}\u{e610}\u{e611}\u{e612}\u{e613}\u{e614}\u{e615}\u{e616}\u{e617}\u{e618}\u{e619}\u{e61a}\u{e61b}\u{e61c}\u{e61d}\u{e61e}\u{e61f}\u{e620}\u{e621}\u{e622}\u{e623}\u{e624}\u{e625}\u{e626}\u{e627}\u{e628}\u{e629}\u{e62a}\u{e62b}\u{e62c}\u{e62d}\u{e62e}\u{e62f}\u{e630}\u{e631}\u{e632}\u{e633}\u{e634}\u{e635}\u{e636}\u{e637}\u{e638}\u{e639}\u{e63a}\u{e63b}\u{e63c}\u{e63d}\u{e63e}\u{e63f}\u{e640}\u{e641}\u{e642}\u{e643}\u{e644}\u{e645}")
-                .font(.custom("flat-ui-pro-icons", size: 20))
-                .foregroundColor(.red)
+               
+                CustomListView()
                 
+            }
+            .onAppear {
+                updateTitle(title: "Page Two")
+            }
+            .tabItem {
+                Image(systemName: "person.fill")
+                Text("Page 2")
+            }
+            
+            VStack{
+               
+                NoSpaceList()
+                
+            }
+            .onAppear {
+                updateTitle(title: "Page Two")
+            }
+            .tabItem {
+                Image(systemName: "person.fill")
+                Text("Page 2")
+            }
+            VStack{
+               
+                BlurryBackGroundView()
                 
             }
             .onAppear {

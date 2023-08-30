@@ -19,6 +19,10 @@
 		000E225A2A7D5A0600072C77 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DD2A7D5A0600072C77 /* libavdevice.a */; };
 		000E225B2A7D5A0600072C77 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DE2A7D5A0600072C77 /* libswresample.a */; };
 		000E225C2A7D5A0600072C77 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DF2A7D5A0600072C77 /* libswscale.a */; };
+		00269E692A9F9C4B00BB035A /* CustomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00269E682A9F9C4B00BB035A /* CustomList.swift */; };
+		00269E6B2A9FA01200BB035A /* CustomList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00269E6A2A9FA01200BB035A /* CustomList2.swift */; };
+		00269E6D2A9FA0D000BB035A /* NoSpaceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00269E6C2A9FA0D000BB035A /* NoSpaceList.swift */; };
+		00269E6F2A9FA39800BB035A /* BlurryBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00269E6E2A9FA39800BB035A /* BlurryBackGroundView.swift */; };
 		00A4511A2A8A91A4003903F3 /* FFmpegUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A451192A8A91A4003903F3 /* FFmpegUtil.m */; };
 		00BF9F092A81585300CFF4DB /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */; };
 		1E33E84E2A78D90D00C32830 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E8472A78D90D00C32830 /* libswresample.a */; };
@@ -314,6 +318,10 @@
 		000E22522A7D5A0600072C77 /* dv_profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dv_profile.h; sourceTree = "<group>"; };
 		000E22542A7D5A0600072C77 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		000E22552A7D5A0600072C77 /* swresample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swresample.h; sourceTree = "<group>"; };
+		00269E682A9F9C4B00BB035A /* CustomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomList.swift; sourceTree = "<group>"; };
+		00269E6A2A9FA01200BB035A /* CustomList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomList2.swift; sourceTree = "<group>"; };
+		00269E6C2A9FA0D000BB035A /* NoSpaceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSpaceList.swift; sourceTree = "<group>"; };
+		00269E6E2A9FA39800BB035A /* BlurryBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurryBackGroundView.swift; sourceTree = "<group>"; };
 		00A451182A8A91A4003903F3 /* FFmpegUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFmpegUtil.h; sourceTree = "<group>"; };
 		00A451192A8A91A4003903F3 /* FFmpegUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFmpegUtil.m; sourceTree = "<group>"; };
 		00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewController.swift; sourceTree = "<group>"; };
@@ -915,6 +923,10 @@
 				1EEBE4422A9C5CE000950E77 /* AppFolderView.swift */,
 				1EEBE4432A9C5CE000950E77 /* DocumentFolderView.swift */,
 				1EEBE4442A9C5CE000950E77 /* MainView.swift */,
+				00269E6E2A9FA39800BB035A /* BlurryBackGroundView.swift */,
+				00269E682A9F9C4B00BB035A /* CustomList.swift */,
+				00269E6A2A9FA01200BB035A /* CustomList2.swift */,
+				00269E6C2A9FA0D000BB035A /* NoSpaceList.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1595,6 +1607,7 @@
 				C44283882281684500A01637 /* RACSignal+Operations.m in Sources */,
 				C44283A52281684500A01637 /* NSData+RACSupport.m in Sources */,
 				C44283B42281684500A01637 /* UITextField+RACSignalSupport.m in Sources */,
+				00269E6D2A9FA0D000BB035A /* NoSpaceList.swift in Sources */,
 				C44283AE2281684500A01637 /* RACPassthroughSubscriber.m in Sources */,
 				C44284962281732000A01637 /* PlayViewController.m in Sources */,
 				C442844F228171A300A01637 /* BaseViewController.m in Sources */,
@@ -1632,6 +1645,7 @@
 				C44283A32281684500A01637 /* NSObject+RACPropertySubscribing.m in Sources */,
 				C44283CA2281684500A01637 /* RACDelegateProxy.m in Sources */,
 				C442844C228170D800A01637 /* SphereUtil.m in Sources */,
+				00269E692A9F9C4B00BB035A /* CustomList.swift in Sources */,
 				C44283B52281684500A01637 /* NSString+RACSequenceAdditions.m in Sources */,
 				C44283C22281684500A01637 /* UIButton+RACCommandSupport.m in Sources */,
 				C44283F52281695B00A01637 /* FFDecoder.m in Sources */,
@@ -1670,6 +1684,7 @@
 				C44283CF2281684500A01637 /* RACEmptySignal.m in Sources */,
 				C442839F2281684500A01637 /* RACErrorSignal.m in Sources */,
 				C442838B2281684500A01637 /* RACTupleSequence.m in Sources */,
+				00269E6B2A9FA01200BB035A /* CustomList2.swift in Sources */,
 				C442841E228169F300A01637 /* FFGLProgramNV12.m in Sources */,
 				0008D4EE2A9B9C7D0061DEF5 /* FUColor.swift in Sources */,
 				C442849A2281734D00A01637 /* MBProgressHUD.m in Sources */,
@@ -1686,6 +1701,7 @@
 				C44283952281684500A01637 /* NSString+RACSupport.m in Sources */,
 				C442838F2281684500A01637 /* RACObjCRuntime.m in Sources */,
 				C442849D2281738B00A01637 /* LoadingView.m in Sources */,
+				00269E6F2A9FA39800BB035A /* BlurryBackGroundView.swift in Sources */,
 				C442837A2281684500A01637 /* RACSubscriptionScheduler.m in Sources */,
 				C4428489228172B900A01637 /* NSArray+MASAdditions.m in Sources */,
 				C44283932281684500A01637 /* RACDynamicSequence.m in Sources */,
@@ -1859,10 +1875,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 43Y657P48S;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3T22C9YP6X;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/GoPlay/Vendor/FFmpeg/include/libavformat\"",
 					"\"$(SRCROOT)/GoPlay/Vendor/FFmpeg/include\"",
@@ -1883,7 +1897,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoxiao.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Xianyu Profile For Everything";
 				SWIFT_OBJC_BRIDGING_HEADER = "GoPlay/GoPlay-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;

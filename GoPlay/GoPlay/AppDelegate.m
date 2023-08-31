@@ -21,20 +21,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
 
-	if (@available(iOS 11.0, *))
-	{
-		[UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-		[UINavigationBar appearance].translucent = NO;
-	}
-    
-    UINavigationBarAppearance *newNavBarAppearance = [self customNavBarAppearance];
-    UINavigationBar *appearance = [UINavigationBar appearance];
-    appearance.scrollEdgeAppearance = newNavBarAppearance;
-    appearance.compactAppearance = newNavBarAppearance;
-    appearance.standardAppearance = newNavBarAppearance;
-    if (@available(iOS 15.0, *)) {
-        appearance.compactScrollEdgeAppearance = newNavBarAppearance;
-    }
+//	if (@available(iOS 11.0, *))
+//	{
+//		[UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+//		[UINavigationBar appearance].translucent = NO;
+//	}
+//
+//    UINavigationBarAppearance *newNavBarAppearance = [self customNavBarAppearance];
+//    UINavigationBar *appearance = [UINavigationBar appearance];
+//    appearance.scrollEdgeAppearance = newNavBarAppearance;
+//    appearance.compactAppearance = newNavBarAppearance;
+//    appearance.standardAppearance = newNavBarAppearance;
+//    if (@available(iOS 15.0, *)) {
+//        appearance.compactScrollEdgeAppearance = newNavBarAppearance;
+//    }
     
     UIViewController *vc = [[MainViewInterface new] makeShipDetailsUI:@"Sarita"];
     

@@ -15,9 +15,21 @@ struct MainView: View {
         
         TabView {
             VStack{
+               
+                BlurryBackGroundView()
+                
+            }
+            .onAppear {
+                updateTitle(title: "Page Two")
+            }
+            .tabItem {
+                Image(systemName: "person.fill")
+                Text("Page 2")
+            }
+            VStack{
                 
                    
-                    CustomListView2()
+                FolderTypeList()
 //                FolderTypeList()
             }
             .onAppear {
@@ -43,18 +55,6 @@ struct MainView: View {
             VStack{
                
                 NoSpaceList()
-                
-            }
-            .onAppear {
-                updateTitle(title: "Page Two")
-            }
-            .tabItem {
-                Image(systemName: "person.fill")
-                Text("Page 2")
-            }
-            VStack{
-               
-                BlurryBackGroundView()
                 
             }
             .onAppear {

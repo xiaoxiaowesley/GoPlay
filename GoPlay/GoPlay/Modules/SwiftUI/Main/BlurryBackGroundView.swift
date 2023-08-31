@@ -109,11 +109,11 @@ struct CardDetector: View {
                     .background(BlurView(style: .regular))
                     .cornerRadius(10)
                     .padding(.vertical,6)
-                    .onLongPressGesture {
-                        withAnimation {
-                            position = .big
-                        }
-                    }
+//                    .onLongPressGesture {
+//                        withAnimation {
+//                            position = .big
+//                        }
+//                    }
                     .padding(.horizontal)
                 case .big:
                 bigcardView(p: p, namespace: namespace)
@@ -123,11 +123,11 @@ struct CardDetector: View {
                     .background(BlurView(style: .regular))
                     .cornerRadius(10)
                     .padding(.vertical,6)
-                    .onLongPressGesture {
-                        withAnimation {
-                            position = .small
-                        }
-                    }
+//                    .onLongPressGesture {
+//                        withAnimation {
+//                            position = .small
+//                        }
+//                    }
                     .padding(.horizontal)
                 }
             }

@@ -23,6 +23,8 @@
 		00269E6B2A9FA01200BB035A /* CustomList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00269E6A2A9FA01200BB035A /* CustomList2.swift */; };
 		00269E6D2A9FA0D000BB035A /* NoSpaceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00269E6C2A9FA0D000BB035A /* NoSpaceList.swift */; };
 		00269E6F2A9FA39800BB035A /* BlurryBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00269E6E2A9FA39800BB035A /* BlurryBackGroundView.swift */; };
+		004D5EB22AAA2C6F00817107 /* CardDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D5EB12AAA2C6F00817107 /* CardDetector.swift */; };
+		004D5EB42AAA2FC400817107 /* CardDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D5EB32AAA2FC300817107 /* CardDocument.swift */; };
 		00A4511A2A8A91A4003903F3 /* FFmpegUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A451192A8A91A4003903F3 /* FFmpegUtil.m */; };
 		00BF9F092A81585300CFF4DB /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */; };
 		1E33E84E2A78D90D00C32830 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E8472A78D90D00C32830 /* libswresample.a */; };
@@ -322,6 +324,8 @@
 		00269E6A2A9FA01200BB035A /* CustomList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomList2.swift; sourceTree = "<group>"; };
 		00269E6C2A9FA0D000BB035A /* NoSpaceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSpaceList.swift; sourceTree = "<group>"; };
 		00269E6E2A9FA39800BB035A /* BlurryBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurryBackGroundView.swift; sourceTree = "<group>"; };
+		004D5EB12AAA2C6F00817107 /* CardDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetector.swift; sourceTree = "<group>"; };
+		004D5EB32AAA2FC300817107 /* CardDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDocument.swift; sourceTree = "<group>"; };
 		00A451182A8A91A4003903F3 /* FFmpegUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFmpegUtil.h; sourceTree = "<group>"; };
 		00A451192A8A91A4003903F3 /* FFmpegUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFmpegUtil.m; sourceTree = "<group>"; };
 		00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewController.swift; sourceTree = "<group>"; };
@@ -905,6 +909,15 @@
 			path = libswresample;
 			sourceTree = "<group>";
 		};
+		004D5EB02AAA2C5C00817107 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				004D5EB12AAA2C6F00817107 /* CardDetector.swift */,
+				004D5EB32AAA2FC300817107 /* CardDocument.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
 		00BF9F042A81575B00CFF4DB /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -919,6 +932,7 @@
 		1EEBE4402A9C5CE000950E77 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				004D5EB02AAA2C5C00817107 /* Cards */,
 				1EEBE4412A9C5CE000950E77 /* FolderTypeList.swift */,
 				1EEBE4422A9C5CE000950E77 /* AppFolderView.swift */,
 				1EEBE4432A9C5CE000950E77 /* DocumentFolderView.swift */,
@@ -1579,6 +1593,7 @@
 				C44283C82281684500A01637 /* NSObject+RACSelectorSignal.m in Sources */,
 				C44283A02281684500A01637 /* RACArraySequence.m in Sources */,
 				C44283842281684500A01637 /* NSEnumerator+RACSequenceAdditions.m in Sources */,
+				004D5EB42AAA2FC400817107 /* CardDocument.swift in Sources */,
 				C44283E72281690D00A01637 /* FFFrameQueue.m in Sources */,
 				C44281AD228167EF00A01637 /* ViewController.m in Sources */,
 				C442843922816CBF00A01637 /* FFGLContext.m in Sources */,
@@ -1649,6 +1664,7 @@
 				C44283B52281684500A01637 /* NSString+RACSequenceAdditions.m in Sources */,
 				C44283C22281684500A01637 /* UIButton+RACCommandSupport.m in Sources */,
 				C44283F52281695B00A01637 /* FFDecoder.m in Sources */,
+				004D5EB22AAA2C6F00817107 /* CardDetector.swift in Sources */,
 				C44283A42281684500A01637 /* RACBehaviorSubject.m in Sources */,
 				C442848C228172B900A01637 /* MASViewConstraint.m in Sources */,
 				C442838A2281684500A01637 /* RACDynamicPropertySuperclass.m in Sources */,

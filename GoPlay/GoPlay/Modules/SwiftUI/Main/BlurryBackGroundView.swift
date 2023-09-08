@@ -76,9 +76,11 @@ struct BlurryBackGroundView: View {
                             .foregroundColor(Color.white)
                     }.padding(.horizontal)
                     VStack {
-                        ForEach(data, id: \.self) { p in
-                            CardDetector(p:p, position: self.position)
-                        }
+                        CardDocument()
+                        CardDetector(p: data[0], position: .small)
+//                        ForEach(data, id: \.self) { p in
+////                            CardDetector(p:p, position: self.position)
+//                        }
                     }
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
             }
@@ -88,166 +90,6 @@ struct BlurryBackGroundView: View {
 struct BlurryBackGroundView_Previews: PreviewProvider {
     static var previews: some View {
         BlurryBackGroundView()
-    }
-}
-
-
-struct CardDetector: View {
-
-    var p: ListData
-    @State var position: CardPosition
-    @Namespace var namespace
-    var body: some View {
-
-            Group {
-                switch position {
-                case .small:
-                smallcardView(p: p, namespace: namespace)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 120)
-                    .background(BlurView(style: .regular))
-                    .cornerRadius(10)
-                    .padding(.vertical,6)
-//                    .onLongPressGesture {
-//                        withAnimation {
-//                            position = .big
-//                        }
-//                    }
-                    .padding(.horizontal)
-                case .big:
-                bigcardView(p: p, namespace: namespace)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 270)
-                    .background(BlurView(style: .regular))
-                    .cornerRadius(10)
-                    .padding(.vertical,6)
-//                    .onLongPressGesture {
-//                        withAnimation {
-//                            position = .small
-//                        }
-//                    }
-                    .padding(.horizontal)
-                }
-            }
-        }
-}
-
-
-struct bigcardView: View {
-    var p: ListData
-    let namespace: Namespace.ID
-    var body: some View {
-        VStack(alignment: .leading) {
-            VStack(alignment: .leading) {
-                Image(p.Image)
-                    .resizable()
-                    .frame(height: 160)
-                    .frame(maxHeight: .infinity)
-                    .cornerRadius(10)
-                    .matchedGeometryEffect(id: "image", in: namespace)
-                Spacer()
-                VStack(alignment: .leading) {
-                    HStack {
-                        blurTags(tags: p.postType, namespace: namespace)
-                        Spacer()
-                        Image(systemName: "ellipsis")
-                            .foregroundColor(Color.white)
-                            .matchedGeometryEffect(id: "ellipsis", in: namespace)
-                    }
-
-                    Spacer()
-                    Text(p.title)
-                        .foregroundColor(Color.textColor)
-                        .matchedGeometryEffect(id: "title", in: namespace)
-                    Spacer()
-                    HStack {
-                        Stars(star: p.stars)
-                            .matchedGeometryEffect(id: "stars", in: namespace)
-                        Text("(100)")
-                            .font(.caption2)
-                            .foregroundColor(.subtextColor)
-                            .matchedGeometryEffect(id: "ratingNum", in: namespace)
-                    }
-                }
-                Spacer()
-                VStack {
-                    Spacer()
-                }
-            }
-        }
-    }
-}
-
-
-struct smallcardView: View {
-
-    var p: ListData
-    let namespace: Namespace.ID
-
-    var body: some View {
-        GeometryReader { g in
-            VStack(alignment: .leading) {
-                HStack {
-                    Image(p.Image)
-                        .resizable()
-                        .frame(width: 120, height: 90)
-                        .cornerRadius(10)
-                        .matchedGeometryEffect(id: "image", in: namespace)
-
-                    VStack(alignment: .leading) {
-                        blurTags(tags: p.postType, namespace: namespace)
-                        Spacer()
-                        Text(p.title)
-                            .foregroundColor(Color.textColor)
-                            .matchedGeometryEffect(id: "title", in: namespace)
-                        Spacer()
-                        HStack {
-                            Stars(star: p.stars)
-                                .matchedGeometryEffect(id: "stars", in: namespace)
-                            Text("(100)")
-                                .font(.caption2)
-                                .foregroundColor(.subtextColor)
-                                .matchedGeometryEffect(id: "ratingNum", in: namespace)
-                        }
-                    }.padding(.leading)
-                    Spacer()
-                    VStack {
-                        Image(systemName: "ellipsis")
-                            .foregroundColor(Color.white)
-                            .matchedGeometryEffect(id: "ellipsis", in: namespace)
-                        Spacer()
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-struct Stars: View {
-
-    var star: Int
-
-    var body: some View {
-        HStack(spacing: 5) {
-
-            ForEach(1...star, id: \.self) { e in
-                Image(systemName: "star.fill")
-                    .foregroundColor(Color.yellow)
-                    .font(.caption)
-                }
-            if star < 5 {
-
-                let e = 5 - star
-                ForEach(1...e, id: \.self) { e in
-                    Image(systemName: "star.fill")
-                        .foregroundColor(Color.gray)
-                        .font(.caption)
-                }
-            }
-        }
     }
 }
 
@@ -277,19 +119,10 @@ struct BlurView: UIViewRepresentable {
 }
 
 
-struct blurTags:  View {
 
-    var tags: Array<String>
-    let namespace: Namespace.ID
-    var body: some View {
-        HStack {
-            ForEach(tags, id: \.self) { tag in
-                Text("\(tag)")
-                    .fontWeight(.semibold)
-                    .foregroundColor(.subtextColor)
-                    .font(.caption)
 
-            }
-        }.matchedGeometryEffect(id: "tags", in: namespace)
+struct Previews_BlurryBackGroundView_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

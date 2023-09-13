@@ -8,20 +8,7 @@
 
 import SwiftUI
 
-struct DataObject  {
-    let filename: String
-    let fullpath: String
-}
 
-extension DataObject: Hashable {
-    static func == (lhs: DataObject, rhs: DataObject) -> Bool {
-        return lhs.fullpath == rhs.fullpath && lhs.filename == rhs.filename
-    }
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(fullpath)
-        hasher.combine(filename)
-    }
-}
 
 
 struct AppFolderView: View {

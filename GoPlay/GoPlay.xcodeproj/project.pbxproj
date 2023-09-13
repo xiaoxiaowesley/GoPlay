@@ -19,6 +19,8 @@
 		000E225A2A7D5A0600072C77 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DD2A7D5A0600072C77 /* libavdevice.a */; };
 		000E225B2A7D5A0600072C77 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DE2A7D5A0600072C77 /* libswresample.a */; };
 		000E225C2A7D5A0600072C77 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E21DF2A7D5A0600072C77 /* libswscale.a */; };
+		001B8B6F2AB20C0D00270355 /* CardRecent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001B8B6E2AB20C0D00270355 /* CardRecent.swift */; };
+		001B8B722AB20E5C00270355 /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001B8B712AB20E5C00270355 /* DataObject.swift */; };
 		00269E692A9F9C4B00BB035A /* CustomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00269E682A9F9C4B00BB035A /* CustomList.swift */; };
 		00269E6B2A9FA01200BB035A /* CustomList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00269E6A2A9FA01200BB035A /* CustomList2.swift */; };
 		00269E6D2A9FA0D000BB035A /* NoSpaceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00269E6C2A9FA0D000BB035A /* NoSpaceList.swift */; };
@@ -320,6 +322,8 @@
 		000E22522A7D5A0600072C77 /* dv_profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dv_profile.h; sourceTree = "<group>"; };
 		000E22542A7D5A0600072C77 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		000E22552A7D5A0600072C77 /* swresample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swresample.h; sourceTree = "<group>"; };
+		001B8B6E2AB20C0D00270355 /* CardRecent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRecent.swift; sourceTree = "<group>"; };
+		001B8B712AB20E5C00270355 /* DataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataObject.swift; sourceTree = "<group>"; };
 		00269E682A9F9C4B00BB035A /* CustomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomList.swift; sourceTree = "<group>"; };
 		00269E6A2A9FA01200BB035A /* CustomList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomList2.swift; sourceTree = "<group>"; };
 		00269E6C2A9FA0D000BB035A /* NoSpaceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSpaceList.swift; sourceTree = "<group>"; };
@@ -909,9 +913,18 @@
 			path = libswresample;
 			sourceTree = "<group>";
 		};
+		001B8B702AB20E4B00270355 /* Bean */ = {
+			isa = PBXGroup;
+			children = (
+				001B8B712AB20E5C00270355 /* DataObject.swift */,
+			);
+			path = Bean;
+			sourceTree = "<group>";
+		};
 		004D5EB02AAA2C5C00817107 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				001B8B6E2AB20C0D00270355 /* CardRecent.swift */,
 				004D5EB12AAA2C6F00817107 /* CardDetector.swift */,
 				004D5EB32AAA2FC300817107 /* CardDocument.swift */,
 			);
@@ -932,6 +945,7 @@
 		1EEBE4402A9C5CE000950E77 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				001B8B702AB20E4B00270355 /* Bean */,
 				004D5EB02AAA2C5C00817107 /* Cards */,
 				1EEBE4412A9C5CE000950E77 /* FolderTypeList.swift */,
 				1EEBE4422A9C5CE000950E77 /* AppFolderView.swift */,
@@ -1650,6 +1664,8 @@
 				C44284642281726600A01637 /* CommonUtil.m in Sources */,
 				C442837B2281684500A01637 /* RACStringSequence.m in Sources */,
 				C44283C52281684500A01637 /* NSObject+RACLifting.m in Sources */,
+				001B8B6F2AB20C0D00270355 /* CardRecent.swift in Sources */,
+				001B8B722AB20E5C00270355 /* DataObject.swift in Sources */,
 				C44283BE2281684500A01637 /* UISlider+RACSignalSupport.m in Sources */,
 				C44283CB2281684500A01637 /* RACEagerSequence.m in Sources */,
 				C44283912281684500A01637 /* RACUnarySequence.m in Sources */,

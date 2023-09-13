@@ -77,6 +77,7 @@ struct BlurryBackGroundView: View {
                     }.padding(.horizontal)
                     VStack {
                         CardDocument()
+                        CardRecent()
                         CardDetector(p: data[0], position: .small)
 //                        ForEach(data, id: \.self) { p in
 ////                            CardDetector(p:p, position: self.position)

@@ -20,17 +20,14 @@ struct MainView: View {
                 
             }
             .onAppear {
-                updateTitle(title: "Page Two")
+                updateTitle(title: "Main ")
             }
             .tabItem {
                 Image(systemName: "person.fill")
-                Text("Page 2")
+                Text("Main")
             }
             VStack{
-                
-                   
                 FolderTypeList()
-//                FolderTypeList()
             }
             .onAppear {
                 updateTitle(title: "Page One")
@@ -40,9 +37,7 @@ struct MainView: View {
                 Text("Page 1")
             }
             VStack{
-               
                 CustomListView()
-                
             }
             .onAppear {
                 updateTitle(title: "Page Two")

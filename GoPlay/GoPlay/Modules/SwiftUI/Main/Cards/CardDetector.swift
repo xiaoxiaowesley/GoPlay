@@ -36,7 +36,6 @@
 
 import SwiftUI
 
-
 struct CardDetector: View {
 
     var p: ListData
@@ -53,7 +52,7 @@ struct CardDetector: View {
                         .frame(height: 120)
                         .background(BlurView(style: .regular))
                         .cornerRadius(10)
-                        .padding(.vertical,6)
+                        .padding(.vertical, 6)
                         .padding(.horizontal)
                     case .big:
                     bigcardView(p: p, namespace: namespace)
@@ -62,7 +61,7 @@ struct CardDetector: View {
                         .frame(height: 270)
                         .background(BlurView(style: .regular))
                         .cornerRadius(10)
-                        .padding(.vertical,6)
+                        .padding(.vertical, 6)
     //                    .onLongPressGesture {
     //                        withAnimation {
     //                            position = .small
@@ -74,12 +73,11 @@ struct CardDetector: View {
         }
 }
 
-//struct CardDetector_Previews: PreviewProvider {
+// struct CardDetector_Previews: PreviewProvider {
 //    static var previews: some View {
 //        CardDetector()
 //    }
-//}
-
+// }
 
 struct Stars: View {
 
@@ -87,7 +85,7 @@ struct Stars: View {
 
     var body: some View {
         HStack(spacing: 5) {
-            ForEach(1...star, id: \.self) { e in
+            ForEach(1...star, id: \.self) { _ in
                 Image(systemName: "star.fill")
                     .foregroundColor(Color.yellow)
                     .font(.caption)
@@ -95,7 +93,7 @@ struct Stars: View {
             if star < 5 {
 
                 let e = 5 - star
-                ForEach(1...e, id: \.self) { e in
+                ForEach(1...e, id: \.self) { _ in
                     Image(systemName: "star.fill")
                         .foregroundColor(Color.gray)
                         .font(.caption)
@@ -104,8 +102,6 @@ struct Stars: View {
         }
     }
 }
-
-
 
 struct bigcardView: View {
     var p: ListData
@@ -152,14 +148,13 @@ struct bigcardView: View {
     }
 }
 
-
 struct smallcardView: View {
 
     var p: ListData
     let namespace: Namespace.ID
 
     var body: some View {
-        GeometryReader { g in
+        GeometryReader { _ in
             VStack(alignment: .leading) {
                 HStack {
                     Image(p.Image)
@@ -197,10 +192,9 @@ struct smallcardView: View {
     }
 }
 
+struct blurTags: View {
 
-struct blurTags:  View {
-
-    var tags: Array<String>
+    var tags: [String]
     let namespace: Namespace.ID
     var body: some View {
         HStack {

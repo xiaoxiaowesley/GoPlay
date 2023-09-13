@@ -1,5 +1,5 @@
 ////
-//  CardDocument.swift
+//  CardRecent.swift
 //  GoPlay
 //
 //                             _ooOoo_
@@ -36,68 +36,86 @@
 
 import SwiftUI
 
-struct CardDocument: View {
+struct CardRecent: View {
     var body: some View {
         Group {
-            CardView()
+            RecentCardView()
                 .padding()
                 .frame(maxWidth: .infinity)
-                .frame(height: 60)
+                .frame(minHeight: 60)
                 .background(BlurView(style: .regular))
                 .cornerRadius(10)
                 .padding(.vertical, 6)
                 .padding(.horizontal)
-
         }
     }
 }
 
-struct CardDocument_Previews: PreviewProvider {
+struct CardRecent_Previews: PreviewProvider {
     static var previews: some View {
-        CardDocument()
+        CardRecent()
     }
 }
 
-struct CardView: View {
-//    var p: ListData
-//    let namespace: Namespace.ID
-
+struct RecentCardView: View {
+    
+    @State private var input: [DataObject]
+    @State private var isLoading = false
+    
+    init() {
+        self.input = [] // Initialize the input array
+    }
+    
     var body: some View {
-        GeometryReader { _ in
+        ScrollView {
             VStack(alignment: .leading) {
                 HStack {
                     VStack {
                         Image(systemName: "externaldrive.fill")
                             .foregroundColor(Color.white)
-//                            .matchedGeometryEffect(id: "ellipsis", in: namespace)
-//                        Spacer()
                     }
-//                        .matchedGeometryEffect(id: "image", in: namespace)
-
                     VStack(alignment: .center) {
-//                        blurTags(tags: p.postType, namespace: namespace)
                         Spacer()
-                        Text(NSLocalizedString("ApplicationFolder", comment: "The sandbox document folder"))
+                        Text(NSLocalizedString("Recently imported", comment: "Files imported"))
                             .foregroundColor(Color.textColor)
-//                            .matchedGeometryEffect(id: "title", in: namespace)
                         Spacer()
-//                        HStack {
-//                            Stars(star: 5)
-////                                .matchedGeometryEffect(id: "stars", in: namespace)
-//                            Text("(100)")
-//                                .font(.caption2)
-//                                .foregroundColor(.subtextColor)
-////                                .matchedGeometryEffect(id: "ratingNum", in: namespace)
-//                        }
                     }.padding(.leading)
                     Spacer()
                     VStack {
                         Image(systemName: "ellipsis")
                             .foregroundColor(Color.white)
-//                            .matchedGeometryEffect(id: "ellipsis", in: namespace)
-//                        Spacer()
+                    }
+                }.onAppear {
+                    print("onAppear")
+                    isLoading = true
+                    DispatchQueue.global(qos: .background).async {
+                        self.input = DataObject.fetchVideoFiles()
+                        if self.input.count == 0 {
+                            self.input.append(DataObject(filename: "big_buck_bunny.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"))
+                            self.input.append(DataObject(filename: "clips.vorwaerts-gmbh.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"))
+                        }
+                        DispatchQueue.main.async {
+                            isLoading = false
+                        }
                     }
                 }
+                
+                VStack {
+                    ForEach(input, id: \.self) { item in
+                        Button(action: {
+                            let player = PlayViewController()
+                            player.url = item.fullpath
+                            let nav = UIApplication.shared.windows.first?.rootViewController as? UINavigationController
+                            nav?.pushViewController(player, animated: true)
+                        }) {
+                            Text(item.filename)
+                                .foregroundColor(.white)
+                                .lineLimit(1)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                }
+                
             }
         }
     }

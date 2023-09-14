@@ -18,6 +18,8 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 		<key>Pods-GoPlay.xcscheme_^#shared#^_</key>
 		<dict>

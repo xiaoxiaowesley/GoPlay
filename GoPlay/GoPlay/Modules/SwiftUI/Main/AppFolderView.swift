@@ -54,8 +54,8 @@ struct AppFolderView: View {
                 self.input = fetchVideoFiles()
                 
                 if self.input.count == 0 {
-                    self.input.append(DataObject(filename: "big_buck_bunny.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"))
-                    self.input.append(DataObject(filename: "clips.vorwaerts-gmbh.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"))
+                    self.input.append(DataObject(filename: "big_buck_bunny.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",time: 1672506061))
+                    self.input.append(DataObject(filename: "clips.vorwaerts-gmbh.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",time: 1672506061))
                 }
                 DispatchQueue.main.async {
                     isLoading = false
@@ -95,8 +95,9 @@ struct AppFolderView: View {
         let docPath = documentsURL
         do {
             let fileURLs = try fileManager.contentsOfDirectory(at: docPath, includingPropertiesForKeys: nil)
+            /// TODO:需要过滤所有的视频文件
             let filePaths:[String]  = fileURLs.filter { $0.pathExtension == "mp4" }.map { $0.path }
-            let dataObjects = filePaths.map { DataObject(filename:URL(fileURLWithPath: $0).lastPathComponent, fullpath:  $0) }
+            let dataObjects = filePaths.map { DataObject(filename:URL(fileURLWithPath: $0).lastPathComponent, fullpath:  $0, time: 1672506061) }
             return dataObjects
         } catch {
             print("Error while enumerating files \(docPath.path): \(error.localizedDescription)")

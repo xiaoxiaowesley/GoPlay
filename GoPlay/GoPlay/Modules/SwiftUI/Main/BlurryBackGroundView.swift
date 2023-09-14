@@ -78,7 +78,6 @@ struct BlurryBackGroundView: View {
                     VStack {
                         CardDocument()
                         CardRecent()
-                        CardDetector(p: data[0], position: .small)
                     }
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
             }

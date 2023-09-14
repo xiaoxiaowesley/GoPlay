@@ -71,7 +71,7 @@ struct RecentCardView: View {
             VStack(alignment: .leading) {
                 HStack {
                     VStack {
-                        Image(systemName: "externaldrive.fill")
+                        Image(systemName: "timer")
                             .foregroundColor(Color.white)
                     }
                     VStack(alignment: .center) {
@@ -80,11 +80,11 @@ struct RecentCardView: View {
                             .foregroundColor(Color.textColor)
                         Spacer()
                     }.padding(.leading)
-                    Spacer()
-                    VStack {
-                        Image(systemName: "ellipsis")
-                            .foregroundColor(Color.white)
-                    }
+//                    Spacer()
+//                    VStack {
+//                        Image(systemName: "doc")
+//                            .foregroundColor(Color.white)
+//                    }
                 }.onAppear {
                     print("onAppear")
                     isLoading = true
@@ -96,19 +96,17 @@ struct RecentCardView: View {
                     }
                 }
                 
-                VStack {
+                VStack(alignment: .leading){
+                    Divider()
+                        .background(Color.white)
+                        .padding(.vertical, 2)
+                        .padding(.horizontal, 16)
                     ForEach(input, id: \.self) { item in
-                        Button(action: {
-                            let player = PlayViewController()
-                            player.url = item.fullpath
-                            let nav = UIApplication.shared.windows.first?.rootViewController as? UINavigationController
-                            nav?.pushViewController(player, animated: true)
-                        }) {
-                            Text(item.filename)
-                                .foregroundColor(.white)
-                                .lineLimit(1)
-                        }
-                        .buttonStyle(PlainButtonStyle())
+                        FileItemView(dataObject: item)
+                        Divider()
+                            .background(Color.white)
+                            .padding(.vertical, 2)
+                            .padding(.horizontal, 16)
                     }
                 }
                 

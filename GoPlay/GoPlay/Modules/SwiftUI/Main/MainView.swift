@@ -15,9 +15,7 @@ struct MainView: View {
         
         TabView {
             VStack{
-               
                 BlurryBackGroundView()
-                
             }
             .onAppear {
                 updateTitle(title: "Main ")
@@ -48,7 +46,7 @@ struct MainView: View {
             }
             
             VStack{
-               
+                
                 NoSpaceList()
                 
             }
@@ -74,17 +72,17 @@ struct MainView: View {
         
         let controller = hostingProvider.viewController
         
-        if let navi = controller?.navigationController {
+        if controller?.navigationController != nil {
         }
     }
     
 }
 
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-        .environmentObject(ViewControllerProvider())
+            .environmentObject(ViewControllerProvider())
     }
 }
 

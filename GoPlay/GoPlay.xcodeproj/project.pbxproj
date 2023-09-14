@@ -42,6 +42,7 @@
 		1EEBE4462A9C5CE000950E77 /* AppFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE4422A9C5CE000950E77 /* AppFolderView.swift */; };
 		1EEBE4472A9C5CE000950E77 /* DocumentFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE4432A9C5CE000950E77 /* DocumentFolderView.swift */; };
 		1EEBE4482A9C5CE000950E77 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE4442A9C5CE000950E77 /* MainView.swift */; };
+		1EFD11802AB32F24008FEF4D /* FileItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD117F2AB32F24008FEF4D /* FileItemView.swift */; };
 		A71760380AC4BE9DE52475B1 /* Pods_GoPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D6D7E196D17EFE6CF6AE97 /* Pods_GoPlay.framework */; };
 		C44281AA228167EF00A01637 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C44281A9228167EF00A01637 /* AppDelegate.m */; };
 		C44281AD228167EF00A01637 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C44281AC228167EF00A01637 /* ViewController.m */; };
@@ -351,6 +352,7 @@
 		1EEBE4422A9C5CE000950E77 /* AppFolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFolderView.swift; sourceTree = "<group>"; };
 		1EEBE4432A9C5CE000950E77 /* DocumentFolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentFolderView.swift; sourceTree = "<group>"; };
 		1EEBE4442A9C5CE000950E77 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		1EFD117F2AB32F24008FEF4D /* FileItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileItemView.swift; sourceTree = "<group>"; };
 		9CE4A0E78D57979D7B92E228 /* Pods-GoPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoPlay.debug.xcconfig"; path = "Target Support Files/Pods-GoPlay/Pods-GoPlay.debug.xcconfig"; sourceTree = "<group>"; };
 		BBA6F401105F11153D75A139 /* Pods-GoPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoPlay.release.xcconfig"; path = "Target Support Files/Pods-GoPlay/Pods-GoPlay.release.xcconfig"; sourceTree = "<group>"; };
 		C44281A5228167EF00A01637 /* GoPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -932,6 +934,7 @@
 				001B8B6E2AB20C0D00270355 /* CardRecent.swift */,
 				004D5EB12AAA2C6F00817107 /* CardDetector.swift */,
 				004D5EB32AAA2FC300817107 /* CardDocument.swift */,
+				1EFD117F2AB32F24008FEF4D /* FileItemView.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -953,7 +956,6 @@
 				9CE4A0E78D57979D7B92E228 /* Pods-GoPlay.debug.xcconfig */,
 				BBA6F401105F11153D75A139 /* Pods-GoPlay.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -1736,6 +1738,7 @@
 				C44283962281684500A01637 /* RACCompoundDisposableProvider.d in Sources */,
 				C44283CE2281684500A01637 /* RACCommand.m in Sources */,
 				C44283C72281684500A01637 /* NSObject+RACKVOWrapper.m in Sources */,
+				1EFD11802AB32F24008FEF4D /* FileItemView.swift in Sources */,
 				C4428485228172B900A01637 /* ViewController+MASAdditions.m in Sources */,
 				C4428484228172B900A01637 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				C44283792281684500A01637 /* UIStepper+RACSignalSupport.m in Sources */,

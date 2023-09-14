@@ -38,11 +38,13 @@ import SwiftUI
 
 struct FileItemView: View {
     var dataObject: DataObject
+    var onTap: ((DataObject) -> Void)? // Add callback function with dataObject parameter
     var body: some View {
         HStack{
             Image(systemName: "doc")
                 .foregroundColor(Color.white)
                 .frame(width: 40, height: 40)
+            
             VStack(alignment: .leading){
                 Text(dataObject.filename)
                     .foregroundColor(Color.textColor)
@@ -60,6 +62,8 @@ struct FileItemView: View {
                     .padding(.bottom, 2)
                     .background(Color.clear)
             }
+        }.onTapGesture {
+            onTap?(dataObject) // Call the callback function with dataObject when tapped
         }
     }
 }

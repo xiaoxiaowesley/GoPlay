@@ -65,15 +65,12 @@ struct RecentCardView: View {
     init() {
         self.input = [] // Initialize the input array
     }
-    
-    //新增onTap函数，参数是DataObject，返回值是Void
-    func onTap(dataObject: DataObject) {
-        let player = PlayViewController()
-        player.url = dataObject.fullpath
-        let nav = UIApplication.shared.windows.first?.rootViewController as? UINavigationController
-        nav?.pushViewController(player, animated: true)
-    }
-    
+    // 添加一个参数 ，入参是(DataObject) ，返回值Void
+    // 添加一个参数 ，入参是(DataObject) ，返回值Void
+    func onTap(dataObject: DataObject) -> Void {
+e        // Your code here
+    }    
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -105,8 +102,9 @@ struct RecentCardView: View {
                         .padding(.vertical, 2)
                         .padding(.horizontal, 16)
                     ForEach(input, id: \.self) { item in
-                        FileItemView(dataObject: item, onTap: onTap)
-                        Divider()
+                        GoPlay/GoPlay/Modules/SwiftUI/Main/Cards/CardRecent.swift
+                                                FileItemView(dataObject: item, onTap: onTap)
+                                                Divider()
                             .background(Color.white)
                             .padding(.vertical, 2)
                             .padding(.horizontal, 16)

@@ -79,9 +79,6 @@ struct BlurryBackGroundView: View {
                         CardDocument()
                         CardRecent()
                         CardDetector(p: data[0], position: .small)
-//                        ForEach(data, id: \.self) { p in
-////                            CardDetector(p:p, position: self.position)
-//                        }
                     }
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
             }

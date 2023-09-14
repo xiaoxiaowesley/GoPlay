@@ -66,7 +66,6 @@ struct RecentCardView: View {
         self.input = [] // Initialize the input array
     }
     
-    //新增onTap函数，参数是DataObject，返回值是Void
     func onTap(dataObject: DataObject) {
         let player = PlayViewController()
         player.url = dataObject.fullpath

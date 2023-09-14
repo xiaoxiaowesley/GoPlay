@@ -22,12 +22,10 @@ struct FolderTypeList: View {
                 }.listRowBackground(Color.wetAsphalt)
             }
             Section {
-                DocumentFolderView(buttonAction: {
-                    FilesManager.shared.openFiles(viewController: hostingProvider.viewController!, action: {( urls: [URL]) -> Void in
-                        
-                    })
-                }, title: NSLocalizedString("FilesFolder", comment: "iOS system Files application"))
-                .listRowBackground(Color.wetAsphalt)
+//                CardFolder(buttonAction: {
+//                   
+//                }, title: NSLocalizedString("FilesFolder", comment: "iOS system Files application"))
+//                .listRowBackground(Color.wetAsphalt)
             }
             
             

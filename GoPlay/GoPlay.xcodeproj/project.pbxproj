@@ -40,7 +40,7 @@
 		1EAD7B7C2A9CC503009397C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EAD7B7E2A9CC503009397C3 /* Localizable.strings */; };
 		1EEBE4452A9C5CE000950E77 /* FolderTypeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE4412A9C5CE000950E77 /* FolderTypeList.swift */; };
 		1EEBE4462A9C5CE000950E77 /* AppFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE4422A9C5CE000950E77 /* AppFolderView.swift */; };
-		1EEBE4472A9C5CE000950E77 /* DocumentFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE4432A9C5CE000950E77 /* DocumentFolderView.swift */; };
+		1EEBE4472A9C5CE000950E77 /* CardFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE4432A9C5CE000950E77 /* CardFolder.swift */; };
 		1EEBE4482A9C5CE000950E77 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE4442A9C5CE000950E77 /* MainView.swift */; };
 		1EFD11802AB32F24008FEF4D /* FileItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD117F2AB32F24008FEF4D /* FileItemView.swift */; };
 		A71760380AC4BE9DE52475B1 /* Pods_GoPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D6D7E196D17EFE6CF6AE97 /* Pods_GoPlay.framework */; };
@@ -350,7 +350,7 @@
 		1EAD7B7F2A9CC508009397C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1EEBE4412A9C5CE000950E77 /* FolderTypeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTypeList.swift; sourceTree = "<group>"; };
 		1EEBE4422A9C5CE000950E77 /* AppFolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFolderView.swift; sourceTree = "<group>"; };
-		1EEBE4432A9C5CE000950E77 /* DocumentFolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentFolderView.swift; sourceTree = "<group>"; };
+		1EEBE4432A9C5CE000950E77 /* CardFolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFolder.swift; sourceTree = "<group>"; };
 		1EEBE4442A9C5CE000950E77 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1EFD117F2AB32F24008FEF4D /* FileItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileItemView.swift; sourceTree = "<group>"; };
 		9CE4A0E78D57979D7B92E228 /* Pods-GoPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoPlay.debug.xcconfig"; path = "Target Support Files/Pods-GoPlay/Pods-GoPlay.debug.xcconfig"; sourceTree = "<group>"; };
@@ -935,6 +935,7 @@
 				004D5EB12AAA2C6F00817107 /* CardDetector.swift */,
 				004D5EB32AAA2FC300817107 /* CardDocument.swift */,
 				1EFD117F2AB32F24008FEF4D /* FileItemView.swift */,
+				1EEBE4432A9C5CE000950E77 /* CardFolder.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -966,7 +967,6 @@
 			children = (
 				1EEBE4412A9C5CE000950E77 /* FolderTypeList.swift */,
 				1EEBE4422A9C5CE000950E77 /* AppFolderView.swift */,
-				1EEBE4432A9C5CE000950E77 /* DocumentFolderView.swift */,
 				1EEBE4442A9C5CE000950E77 /* MainView.swift */,
 				00269E682A9F9C4B00BB035A /* CustomList.swift */,
 				00269E6A2A9FA01200BB035A /* CustomList2.swift */,
@@ -1644,7 +1644,7 @@
 				C44283872281684500A01637 /* RACStream.m in Sources */,
 				C44283972281684500A01637 /* NSURLConnection+RACSupport.m in Sources */,
 				C44283AF2281684500A01637 /* NSArray+RACSequenceAdditions.m in Sources */,
-				1EEBE4472A9C5CE000950E77 /* DocumentFolderView.swift in Sources */,
+				1EEBE4472A9C5CE000950E77 /* CardFolder.swift in Sources */,
 				1EEBE4462A9C5CE000950E77 /* AppFolderView.swift in Sources */,
 				C442848D228172B900A01637 /* MASViewAttribute.m in Sources */,
 				C44283D12281684500A01637 /* RACTuple.m in Sources */,

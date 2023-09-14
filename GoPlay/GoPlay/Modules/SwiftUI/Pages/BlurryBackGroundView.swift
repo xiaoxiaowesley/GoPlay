@@ -76,8 +76,9 @@ struct BlurryBackGroundView: View {
                             .foregroundColor(Color.white)
                     }.padding(.horizontal)
                     VStack {
-                        CardDocument()
                         CardRecent()
+                        CardDocument()
+                        CardFolder()
                     }
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
             }

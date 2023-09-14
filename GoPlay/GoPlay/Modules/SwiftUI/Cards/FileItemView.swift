@@ -41,7 +41,7 @@ struct FileItemView: View {
     var onTap: ((DataObject) -> Void)? // Add callback function with dataObject parameter
     var body: some View {
         HStack{
-            Image(systemName: "doc")
+            Image(systemName: "play.square")
                 .foregroundColor(Color.white)
                 .frame(width: 40, height: 40)
             

@@ -51,7 +51,7 @@ struct FolderView: View {
                 }.padding(.leading)
                 Spacer()
                 VStack {
-                    Image(systemName: "ellipsis")
+                    Image(systemName: "chevron.right")
                         .foregroundColor(Color.white)
                 }
             }

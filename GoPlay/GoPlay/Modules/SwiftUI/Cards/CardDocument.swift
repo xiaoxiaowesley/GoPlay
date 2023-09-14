@@ -92,7 +92,7 @@ struct CardView: View {
                     }.padding(.leading)
                     Spacer()
                     VStack {
-                        Image(systemName: "ellipsis")
+                        Image(systemName: "chevron.right")
                             .foregroundColor(Color.white)
 //                            .matchedGeometryEffect(id: "ellipsis", in: namespace)
 //                        Spacer()

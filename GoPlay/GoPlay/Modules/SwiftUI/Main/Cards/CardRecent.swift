@@ -90,10 +90,6 @@ struct RecentCardView: View {
                     isLoading = true
                     DispatchQueue.global(qos: .background).async {
                         self.input = DataObject.fetchVideoFiles()
-                        if self.input.count == 0 {
-                            self.input.append(DataObject(filename: "big_buck_bunny.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"))
-                            self.input.append(DataObject(filename: "clips.vorwaerts-gmbh.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"))
-                        }
                         DispatchQueue.main.async {
                             isLoading = false
                         }

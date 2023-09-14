@@ -40,7 +40,7 @@ import Foundation
 struct DataObject {
     let filename: String
     let fullpath: String
-        
+    
     static func fetchVideoFiles() -> [DataObject] {
         let fileManager = FileManager.default
         let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -53,7 +53,13 @@ struct DataObject {
         } catch {
             print("Error while enumerating files \(docPath.path): \(error.localizedDescription)")
         }
-        return []
+        
+        // FOR TEST
+        return [
+            DataObject(filename: "big_buck_bunny.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"),
+            DataObject(filename: "clips.vorwaerts-gmbh.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+        ]
+        //        return []
     }
 }
 extension DataObject: Hashable {

@@ -942,7 +942,9 @@
 		00BF9F042A81575B00CFF4DB /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				1EEBE4402A9C5CE000950E77 /* Main */,
+				004D5EB02AAA2C5C00817107 /* Cards */,
+				001B8B702AB20E4B00270355 /* Bean */,
+				1EFD11812AB332D5008FEF4D /* Pages */,
 				0008D4EA2A9B9C7D0061DEF5 /* FlatUI */,
 				0008D4F32A9B9CF80061DEF5 /* MainViewInterface.swift */,
 				1EAD7B762A9CBB6E009397C3 /* FilesManager.swift */,
@@ -962,18 +964,24 @@
 		1EEBE4402A9C5CE000950E77 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				001B8B702AB20E4B00270355 /* Bean */,
-				004D5EB02AAA2C5C00817107 /* Cards */,
 				1EEBE4412A9C5CE000950E77 /* FolderTypeList.swift */,
 				1EEBE4422A9C5CE000950E77 /* AppFolderView.swift */,
 				1EEBE4432A9C5CE000950E77 /* DocumentFolderView.swift */,
 				1EEBE4442A9C5CE000950E77 /* MainView.swift */,
-				00269E6E2A9FA39800BB035A /* BlurryBackGroundView.swift */,
 				00269E682A9F9C4B00BB035A /* CustomList.swift */,
 				00269E6A2A9FA01200BB035A /* CustomList2.swift */,
 				00269E6C2A9FA0D000BB035A /* NoSpaceList.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		1EFD11812AB332D5008FEF4D /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				1EEBE4402A9C5CE000950E77 /* Main */,
+				00269E6E2A9FA39800BB035A /* BlurryBackGroundView.swift */,
+			);
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		C442819C228167EF00A01637 = {

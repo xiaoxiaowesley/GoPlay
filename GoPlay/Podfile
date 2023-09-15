@@ -5,6 +5,6 @@ target 'GoPlay' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for GoPlay
+  pod 'DeviceKit', '3.2'
 
 end

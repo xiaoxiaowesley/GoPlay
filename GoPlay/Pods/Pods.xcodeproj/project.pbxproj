@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B7BE2E1F803E11480E53F7D5C9F719F5 /* Pods-GoPlay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF2D8840DCD227A0D8BB803EF61106F /* Pods-GoPlay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6B56C33AF78C9850831021995110F83 /* Pods-GoPlay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D8CA9B8422F5F76A8AFA560D2BA95C /* Pods-GoPlay-dummy.m */; };
-		FEBB7FB1FC30CED82338B4FAFA9C2C03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		04560BC4AA6241A762466CD9EDF950F9 /* Pods-GoPlay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D8CA9B8422F5F76A8AFA560D2BA95C /* Pods-GoPlay-dummy.m */; };
+		F1CD333621B66430DD3127FC1D3DC81C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		F3F071A5E00CF467558D5652A41012D3 /* Pods-GoPlay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF2D8840DCD227A0D8BB803EF61106F /* Pods-GoPlay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07F042E9AD4CDBFE8B0CF0E0971F6C01 /* Pods-GoPlay-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GoPlay-Info.plist"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		51D8CA9B8422F5F76A8AFA560D2BA95C /* Pods-GoPlay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GoPlay-dummy.m"; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		755988031960924A15BCB141C4D82A84 /* Pods-GoPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GoPlay.release.xcconfig"; sourceTree = "<group>"; };
 		96766722FF2BAE3844751A6B76D02FFE /* Pods-GoPlay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GoPlay.modulemap"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9FF4631C7E4DCDA244D7D6C4B5EA5510 /* Pods-GoPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GoPlay.debug.xcconfig"; sourceTree = "<group>"; };
 		BB8EBB6428391564E95271C2F6546605 /* Pods-GoPlay-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GoPlay-acknowledgements.plist"; sourceTree = "<group>"; };
-		CED694B84A555FAA3F4DBDB64043917B /* Pods-GoPlay */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GoPlay"; path = Pods_GoPlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED694B84A555FAA3F4DBDB64043917B /* Pods_GoPlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GoPlay.framework; path = "Pods-GoPlay.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF2D8840DCD227A0D8BB803EF61106F /* Pods-GoPlay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GoPlay-umbrella.h"; sourceTree = "<group>"; };
 		FE0FEBBC23DD430EFEB13F99C531DDAF /* Pods-GoPlay-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GoPlay-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FE0FC8549D05CC6F3E12F23A059F1115 /* Frameworks */ = {
+		A2CCB5B8CBA187F26B49B502C92AA9F7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEBB7FB1FC30CED82338B4FAFA9C2C03 /* Foundation.framework in Frameworks */,
+				F1CD333621B66430DD3127FC1D3DC81C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +54,10 @@
 			path = "Target Support Files/Pods-GoPlay";
 			sourceTree = "<group>";
 		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+		5653D9842793843A1807DBC4087FE06B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		5A58F8592503C4EC02D554E930B04333 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CED694B84A555FAA3F4DBDB64043917B /* Pods-GoPlay */,
+				CED694B84A555FAA3F4DBDB64043917B /* Pods_GoPlay.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,12 +70,20 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				5A58F8592503C4EC02D554E930B04333 /* Products */,
+				5653D9842793843A1807DBC4087FE06B /* Products */,
 				AE10FF3176499CAFB4ACF9616D1EE801 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +91,7 @@
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -99,11 +99,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C7DC0EFA67FC4599F2EC6E1549FBAB33 /* Headers */ = {
+		FCE928D3654F170C201B6BC47C3ED3AE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7BE2E1F803E11480E53F7D5C9F719F5 /* Pods-GoPlay-umbrella.h in Headers */,
+				F3F071A5E00CF467558D5652A41012D3 /* Pods-GoPlay-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,20 +112,20 @@
 /* Begin PBXNativeTarget section */
 		DBC15D3351951834AE22056155BD4574 /* Pods-GoPlay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18E8B0082E3398FB1CC8C5C14B8161D6 /* Build configuration list for PBXNativeTarget "Pods-GoPlay" */;
+			buildConfigurationList = 57DB616B8899AE2387F6B40A94A31A1A /* Build configuration list for PBXNativeTarget "Pods-GoPlay" */;
 			buildPhases = (
-				C7DC0EFA67FC4599F2EC6E1549FBAB33 /* Headers */,
-				10AD1F506BDAA88900C1D690F2C81488 /* Sources */,
-				FE0FC8549D05CC6F3E12F23A059F1115 /* Frameworks */,
-				BDFE96F003293A4BC7360D993F5C2C2B /* Resources */,
+				FCE928D3654F170C201B6BC47C3ED3AE /* Headers */,
+				F72D11ECAAB5963E76F2A267F584C7A6 /* Sources */,
+				A2CCB5B8CBA187F26B49B502C92AA9F7 /* Frameworks */,
+				C1590C098107720B901A946118AA1472 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Pods-GoPlay";
-			productName = Pods_GoPlay;
-			productReference = CED694B84A555FAA3F4DBDB64043917B /* Pods-GoPlay */;
+			productName = "Pods-GoPlay";
+			productReference = CED694B84A555FAA3F4DBDB64043917B /* Pods_GoPlay.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -134,20 +134,19 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
-				ORGANIZATIONNAME = Alibaba;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				Base,
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 5A58F8592503C4EC02D554E930B04333 /* Products */;
+			productRefGroup = 5653D9842793843A1807DBC4087FE06B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -157,7 +156,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BDFE96F003293A4BC7360D993F5C2C2B /* Resources */ = {
+		C1590C098107720B901A946118AA1472 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -167,22 +166,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		10AD1F506BDAA88900C1D690F2C81488 /* Sources */ = {
+		F72D11ECAAB5963E76F2A267F584C7A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6B56C33AF78C9850831021995110F83 /* Pods-GoPlay-dummy.m in Sources */,
+				04560BC4AA6241A762466CD9EDF950F9 /* Pods-GoPlay-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4BC7450F9457737EE3E637BA155B56F7 /* Debug */ = {
+		8A3650F6C8AC2EFFA814EA61C37468B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -205,7 +203,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -244,50 +241,10 @@
 			};
 			name = Debug;
 		};
-		67D8B29B0939CCC1F8C573076B6D462E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FF4631C7E4DCDA244D7D6C4B5EA5510 /* Pods-GoPlay.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-GoPlay/Pods-GoPlay-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GoPlay/Pods-GoPlay.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */ = {
+		AF1F8D2941B0228930706FA0F2C9BB78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -310,7 +267,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -345,14 +301,13 @@
 			};
 			name = Release;
 		};
-		F79FA3F90F69AFF0F637083093D19993 /* Release */ = {
+		BD1CCC0FAF9209CD494795F3AB3F7182 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 755988031960924A15BCB141C4D82A84 /* Pods-GoPlay.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -385,23 +340,61 @@
 			};
 			name = Release;
 		};
+		F2749D81386600F84B5FE791DE284D99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FF4631C7E4DCDA244D7D6C4B5EA5510 /* Pods-GoPlay.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GoPlay/Pods-GoPlay-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GoPlay/Pods-GoPlay.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18E8B0082E3398FB1CC8C5C14B8161D6 /* Build configuration list for PBXNativeTarget "Pods-GoPlay" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				67D8B29B0939CCC1F8C573076B6D462E /* Debug */,
-				F79FA3F90F69AFF0F637083093D19993 /* Release */,
+				8A3650F6C8AC2EFFA814EA61C37468B1 /* Debug */,
+				AF1F8D2941B0228930706FA0F2C9BB78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+		57DB616B8899AE2387F6B40A94A31A1A /* Build configuration list for PBXNativeTarget "Pods-GoPlay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4BC7450F9457737EE3E637BA155B56F7 /* Debug */,
-				8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */,
+				F2749D81386600F84B5FE791DE284D99 /* Debug */,
+				BD1CCC0FAF9209CD494795F3AB3F7182 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

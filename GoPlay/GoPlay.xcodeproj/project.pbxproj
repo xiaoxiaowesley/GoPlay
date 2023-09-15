@@ -27,6 +27,7 @@
 		00269E6F2A9FA39800BB035A /* BlurryBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00269E6E2A9FA39800BB035A /* BlurryBackGroundView.swift */; };
 		004D5EB22AAA2C6F00817107 /* CardDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D5EB12AAA2C6F00817107 /* CardDetector.swift */; };
 		004D5EB42AAA2FC400817107 /* CardDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D5EB32AAA2FC300817107 /* CardDocument.swift */; };
+		009E44532AB36BE0007A9163 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009E44522AB36BE0007A9163 /* UIDevice.swift */; };
 		00A4511A2A8A91A4003903F3 /* FFmpegUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A451192A8A91A4003903F3 /* FFmpegUtil.m */; };
 		00BF9F092A81585300CFF4DB /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */; };
 		1E33E84E2A78D90D00C32830 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E8472A78D90D00C32830 /* libswresample.a */; };
@@ -332,6 +333,7 @@
 		00269E6E2A9FA39800BB035A /* BlurryBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurryBackGroundView.swift; sourceTree = "<group>"; };
 		004D5EB12AAA2C6F00817107 /* CardDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetector.swift; sourceTree = "<group>"; };
 		004D5EB32AAA2FC300817107 /* CardDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDocument.swift; sourceTree = "<group>"; };
+		009E44522AB36BE0007A9163 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		00A451182A8A91A4003903F3 /* FFmpegUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFmpegUtil.h; sourceTree = "<group>"; };
 		00A451192A8A91A4003903F3 /* FFmpegUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFmpegUtil.m; sourceTree = "<group>"; };
 		00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewController.swift; sourceTree = "<group>"; };
@@ -940,9 +942,18 @@
 			path = Cards;
 			sourceTree = "<group>";
 		};
+		009E44512AB36BD1007A9163 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				009E44522AB36BE0007A9163 /* UIDevice.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		00BF9F042A81575B00CFF4DB /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				009E44512AB36BD1007A9163 /* Utils */,
 				004D5EB02AAA2C5C00817107 /* Cards */,
 				001B8B702AB20E4B00270355 /* Bean */,
 				1EFD11812AB332D5008FEF4D /* Pages */,
@@ -1699,6 +1710,7 @@
 				1EAD7B772A9CBB6E009397C3 /* FilesManager.swift in Sources */,
 				C44284022281698600A01637 /* BitBuffer.cpp in Sources */,
 				C44284062281699800A01637 /* FFPacketQueue.m in Sources */,
+				009E44532AB36BE0007A9163 /* UIDevice.swift in Sources */,
 				C44283B92281684500A01637 /* NSInvocation+RACTypeParsing.m in Sources */,
 				C44283822281684500A01637 /* RACTargetQueueScheduler.m in Sources */,
 				C44283E42281690300A01637 /* FFFrame.m in Sources */,
@@ -1962,10 +1974,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 43Y657P48S;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3T22C9YP6X;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/GoPlay/Vendor/FFmpeg/include/libavformat\"",
 					"\"$(SRCROOT)/GoPlay/Vendor/FFmpeg/include\"",
@@ -1986,7 +1996,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoxiao.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Xianyu Profile For Everything";
 				SWIFT_OBJC_BRIDGING_HEADER = "GoPlay/GoPlay-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;

@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  FlatUI
 //
 //  Created by xiaoxiang's m1 mbp on 2023/8/24.
@@ -18,32 +18,32 @@ struct MainView: View {
                 BlurryBackGroundView()
             }
             .onAppear {
-                updateTitle(title: "Main ")
+                updateTitle(title: "Main")
             }
             .tabItem {
                 Image(systemName: "person.fill")
-                Text("Main")
+                Text(NSLocalizedString("Main", comment: "Main page"))
             }
-            VStack{
-                FolderTypeList()
-            }
-            .onAppear {
-                updateTitle(title: "Page One")
-            }
-            .tabItem {
-                Image(systemName: "play.fill")
-                Text("Page 1")
-            }
-            VStack{
-                CustomListView()
-            }
-            .onAppear {
-                updateTitle(title: "Page Two")
-            }
-            .tabItem {
-                Image(systemName: "person.fill")
-                Text("Page 2")
-            }
+//            VStack{
+//                FolderTypeList()
+//            }
+//            .onAppear {
+//                updateTitle(title: "Page One")
+//            }
+//            .tabItem {
+//                Image(systemName: "play.fill")
+//                Text("Page 1")
+//            }
+//            VStack{
+//                CustomListView()
+//            }
+//            .onAppear {
+//                updateTitle(title: "Page Two")
+//            }
+//            .tabItem {
+//                Image(systemName: "person.fill")
+//                Text("Page 2")
+//            }
             
             VStack{
                 

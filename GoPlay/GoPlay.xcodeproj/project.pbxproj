@@ -30,6 +30,8 @@
 		009E44532AB36BE0007A9163 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009E44522AB36BE0007A9163 /* UIDevice.swift */; };
 		00A4511A2A8A91A4003903F3 /* FFmpegUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A451192A8A91A4003903F3 /* FFmpegUtil.m */; };
 		00BF9F092A81585300CFF4DB /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */; };
+		00F46A6F2AFA987D0030900D /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F46A6E2AFA987C0030900D /* PlayerViewController.swift */; };
+		00F46A722AFA98E90030900D /* VideoCtrlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F46A712AFA98E90030900D /* VideoCtrlView.swift */; };
 		1E33E84E2A78D90D00C32830 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E8472A78D90D00C32830 /* libswresample.a */; };
 		1E33E84F2A78D90E00C32830 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E8482A78D90D00C32830 /* libavcodec.a */; };
 		1E33E8502A78D90E00C32830 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E8492A78D90D00C32830 /* libavdevice.a */; };
@@ -337,6 +339,8 @@
 		00A451182A8A91A4003903F3 /* FFmpegUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFmpegUtil.h; sourceTree = "<group>"; };
 		00A451192A8A91A4003903F3 /* FFmpegUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFmpegUtil.m; sourceTree = "<group>"; };
 		00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewController.swift; sourceTree = "<group>"; };
+		00F46A6E2AFA987C0030900D /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		00F46A712AFA98E90030900D /* VideoCtrlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCtrlView.swift; sourceTree = "<group>"; };
 		1E33E8472A78D90D00C32830 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = GoPlay/Vendor/FFmpeg/lib/libswresample.a; sourceTree = "<group>"; };
 		1E33E8482A78D90D00C32830 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = GoPlay/Vendor/FFmpeg/lib/libavcodec.a; sourceTree = "<group>"; };
 		1E33E8492A78D90D00C32830 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = GoPlay/Vendor/FFmpeg/lib/libavdevice.a; sourceTree = "<group>"; };
@@ -953,6 +957,8 @@
 		00BF9F042A81575B00CFF4DB /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				00F46A702AFA98E90030900D /* Views */,
+				00F46A6D2AFA987C0030900D /* ViewControllers */,
 				009E44512AB36BD1007A9163 /* Utils */,
 				004D5EB02AAA2C5C00817107 /* Cards */,
 				001B8B702AB20E4B00270355 /* Bean */,
@@ -962,6 +968,22 @@
 				1EAD7B762A9CBB6E009397C3 /* FilesManager.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		00F46A6D2AFA987C0030900D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				00F46A6E2AFA987C0030900D /* PlayerViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		00F46A702AFA98E90030900D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00F46A712AFA98E90030900D /* VideoCtrlView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		17DA5523EDED909704BF98C5 /* Pods */ = {
@@ -1667,6 +1689,7 @@
 				C4428486228172B900A01637 /* MASCompositeConstraint.m in Sources */,
 				C44283852281684500A01637 /* RACIndexSetSequence.m in Sources */,
 				C442838E2281684500A01637 /* RACChannel.m in Sources */,
+				00F46A6F2AFA987D0030900D /* PlayerViewController.swift in Sources */,
 				C44283AB2281684500A01637 /* RACEvent.m in Sources */,
 				C44283C82281684500A01637 /* NSObject+RACSelectorSignal.m in Sources */,
 				C44283A02281684500A01637 /* RACArraySequence.m in Sources */,
@@ -1686,6 +1709,7 @@
 				C44283BC2281684500A01637 /* UIRefreshControl+RACCommandSupport.m in Sources */,
 				C442841F228169F300A01637 /* FFGLProgramYUV420.m in Sources */,
 				C44283A22281684500A01637 /* RACKVOChannel.m in Sources */,
+				00F46A722AFA98E90030900D /* VideoCtrlView.swift in Sources */,
 				C44283A82281684500A01637 /* UIBarButtonItem+RACCommandSupport.m in Sources */,
 				C44283802281684500A01637 /* UITableViewCell+RACSignalSupport.m in Sources */,
 				C442848B228172B900A01637 /* MASConstraint.m in Sources */,

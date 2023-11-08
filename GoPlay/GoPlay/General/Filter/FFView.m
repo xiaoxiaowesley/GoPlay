@@ -79,7 +79,7 @@
 {
 	[[FFGLContext shareInstance] useCurrentContext];
 	self.program = [[FFGLProgram alloc]initWithVertexShader:kFFPassthroughVertexShaderString
-											 fragmentShader:kFFPassthroughFragmentShaderString];
+                                             fragmentShader:kFFPassthroughFragmentShaderString];
 
 	self.positionId = [self.program bindAttribute:@"position"];
 	self.inputTextureCoordinateId = [self.program bindAttribute:@"inputTextureCoordinate"];

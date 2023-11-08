@@ -35,6 +35,7 @@ const static int kCountdownToHideNum = 5;
 @property(nonatomic,strong) UIButton* filterBtn;
 @property(nonatomic,strong) UIButton* vrBtn;
 @property(nonatomic,strong) UIButton* playBtn;
+@property(nonatomic,strong) UIButton* rotateBtn;
 
 @property(nonatomic,strong) NSMutableArray* landscapeControls;
 @property(nonatomic,assign) int countdownToHide;
@@ -67,6 +68,13 @@ const static int kCountdownToHideNum = 5;
     return self;
 }
 
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - Method
 - (void)setIsPlay:(BOOL)isPlay
 {
     _isPlay = isPlay;
@@ -115,6 +123,7 @@ const static int kCountdownToHideNum = 5;
     [self addControls:self.vrBtn];
     [self addControls:self.filterBtn];
     [self addControls:self.timeLabel];
+    [self addControls:self.rotateBtn];
 }
 
 - (void)addControls:(UIView *)view
@@ -176,6 +185,11 @@ const static int kCountdownToHideNum = 5;
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.filterBtn.mas_right).offset(15);
         make.centerY.equalTo(self.playBtn);
+    }];
+    
+    [self.rotateBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self);
+        make.right.equalTo(self);
     }];
 }
 
@@ -242,6 +256,15 @@ const static int kCountdownToHideNum = 5;
         if(self.didSeek)
         {
             self.didSeek(self.slider.value);
+        }
+    }];
+    
+    [[self.rotateBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
+     subscribeNext:^(id x) {
+        @strongify(self)
+        if(self.didRotate)
+        {
+            self.didRotate();
         }
     }];
     
@@ -467,6 +490,8 @@ const static int kCountdownToHideNum = 5;
     return YES;
 }
 
+#pragma mark - Buttons
+
 - (UIButton *)goBackBtn
 {
     if(!_goBackBtn)
@@ -523,6 +548,16 @@ const static int kCountdownToHideNum = 5;
     return _filterBtn;
 }
 
+-(UIButton *)rotateBtn{
+    if(!_rotateBtn)
+    {
+        _rotateBtn = [[UIButton alloc]init];
+        [_rotateBtn setTitle:@"旋转" forState:UIControlStateNormal];
+        [_rotateBtn setBackgroundColor:[UIColor redColor]];
+    }
+    return _rotateBtn;
+}
+
 - (UILabel *)timeLabel
 {
     if(!_timeLabel)
@@ -558,9 +593,5 @@ const static int kCountdownToHideNum = 5;
     return _landscapeControls;
 }
 
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
 
 @end

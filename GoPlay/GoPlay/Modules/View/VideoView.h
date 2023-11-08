@@ -17,6 +17,7 @@
 @property(nonatomic,copy) void(^didSeek)(float);
 @property(nonatomic,copy) void(^didSeeking)(float);
 @property(nonatomic,copy) void(^didUpdateVolume)(float);
+@property(nonatomic,copy) void(^didRotate)(void);
 
 @property(nonatomic,copy) void(^didHorizontalStartPan)(void);
 @property(nonatomic,copy) void(^didHorizontalPanning)(float);

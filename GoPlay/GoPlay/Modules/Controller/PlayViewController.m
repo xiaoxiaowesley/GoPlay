@@ -168,6 +168,10 @@
 		@strongify(self)
 		self.ffplay.audioController.volume = value;
 	};
+    
+    self.controlView.didRotate = ^{
+        NSLog(@"旋转");
+    };
 
 	[RACObserve(self.ffplay.state, playing)
 	 subscribeNext:^(id x) {

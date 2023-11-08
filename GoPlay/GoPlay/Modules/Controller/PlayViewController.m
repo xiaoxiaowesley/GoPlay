@@ -170,7 +170,11 @@
 	};
     
     self.controlView.didRotate = ^{
-        NSLog(@"旋转");
+        @strongify(self)
+        FFRotationMode current = self.ffplay.ffMovie.mode;
+        int nextModeIdx = ((int)current + 1)%4;
+        FFRotationMode nextMode = (FFRotationMode)nextModeIdx;
+        self.ffplay.ffMovie.mode = nextMode;
     };
 
 	[RACObserve(self.ffplay.state, playing)

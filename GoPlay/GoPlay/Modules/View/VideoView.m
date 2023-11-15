@@ -29,7 +29,6 @@ const static int kCountdownToHideNum = 5;
 
 @interface VideoView()
 @property(nonatomic,strong) UIButton* goBackBtn;
-
 @property(nonatomic,strong) UISlider* slider;
 
 //@property(nonatomic,strong) UIButton* filterBtn;
@@ -118,6 +117,7 @@ const static int kCountdownToHideNum = 5;
 - (void)addSubviews
 {
     [self addControls:self.goBackBtn];
+    [self addControls:self.titleLabel];
     [self addControls:self.slider];
     [self addControls:self.playBtn];
 //    [self addControls:self.vrBtn];
@@ -137,7 +137,7 @@ const static int kCountdownToHideNum = 5;
     // 获取当前设备是否竖屏/横屏，并赋值给isPortrait
     BOOL isPortrait = UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation);
     
-    // 按钮
+    // 返回按钮
     [self.goBackBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         // 如果当前是竖屏，而且是刘海屏，top的边距需要加30
         if (isPortrait && [UIDevice isNotch]) {
@@ -150,6 +150,13 @@ const static int kCountdownToHideNum = 5;
         make.size.mas_equalTo(CGSizeMake(44, 44));
     }];
     
+    //标题
+    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.goBackBtn.mas_right).offset(15);
+        make.right.mas_equalTo(44+15);
+        make.height.mas_equalTo(44);
+        make.centerY.equalTo(self.goBackBtn.mas_centerY);
+    }];
     
     double bottom = 0;
     double horizonSpace = 30;
@@ -592,6 +599,13 @@ const static int kCountdownToHideNum = 5;
     }
     
     return _landscapeControls;
+}
+
+-(UILabel*)titleLabel{
+    if(!_titleLabel){
+        _titleLabel = [[UILabel alloc]init];
+    }
+    return _titleLabel;
 }
 
 

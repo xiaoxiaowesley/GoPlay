@@ -30,6 +30,7 @@
 
 @property(nonatomic,strong) UILabel* timeLabel;
 @property(nonatomic,strong) TipsView* tipsView;
+@property(nonatomic,strong) UILabel* titleLabel;
 
 - (void)updateTime:(float)time duration:(float)duration;
 - (void)updateSliderValue:(float)value;

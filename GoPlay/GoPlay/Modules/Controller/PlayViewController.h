@@ -11,4 +11,5 @@
 
 @interface PlayViewController : BaseViewController
 @property(nonatomic,strong) NSString* url;
+@property(nonatomic,strong) NSString* fileName;
 @end

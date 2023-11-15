@@ -73,6 +73,12 @@
 	self.ffplay.url = url;
 }
 
+-(void )setFileName:(NSString *)fileName
+{
+    _fileName = fileName;
+    self.controlView.titleLabel.text = fileName;
+}
+
 - (void)addSubviews
 {
 	[self.view addSubview:self.ffView];

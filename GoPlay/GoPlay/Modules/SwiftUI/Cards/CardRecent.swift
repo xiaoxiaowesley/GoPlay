@@ -70,6 +70,7 @@ struct RecentCardView: View {
     func onTap(dataObject: DataObject) {
         let player = PlayViewController()
         player.url = dataObject.fullpath
+        player.fileName = dataObject.filename
         let nav = UIApplication.shared.windows.first?.rootViewController as? UINavigationController
         nav?.pushViewController(player, animated: true)
     }

@@ -152,8 +152,8 @@ const static int kCountdownToHideNum = 5;
     
     //标题
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.goBackBtn.mas_right).offset(15);
-        make.right.mas_equalTo(44+15);
+        make.left.equalTo(self.goBackBtn.mas_right).offset(10);
+        make.right.mas_equalTo(44+10);
         make.height.mas_equalTo(44);
         make.centerY.equalTo(self.goBackBtn.mas_centerY);
     }];

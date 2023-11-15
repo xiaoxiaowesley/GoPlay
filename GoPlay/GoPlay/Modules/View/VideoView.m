@@ -152,21 +152,22 @@ const static int kCountdownToHideNum = 5;
     
     
     double bottom = 0;
-    double left = 0;
+    double horizonSpace = 30;
     if (isPortrait && [UIDevice isNotch]) {
         bottom = [UIDevice safeAreaInsets].bottom;
     }
     
+    bottom += 20;
+    
     [self.slider mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(16);
-        make.bottom.equalTo(self).offset(-51-bottom);
-        make.left.equalTo(self).offset(15+left);
-        make.right.equalTo(self).offset(-15);
+        make.bottom.equalTo(self).offset(-60-bottom);
+        make.left.equalTo(self).offset(horizonSpace);
+        make.right.equalTo(self).offset(-horizonSpace);
     }];
     
     [self.playBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.left.equalTo(self).offset(15);
+        make.left.equalTo(self).offset(horizonSpace);
         make.bottom.equalTo(self).offset(-bottom);
         make.size.mas_equalTo(CGSizeMake(44, 44));
     }];

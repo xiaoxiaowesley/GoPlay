@@ -193,62 +193,62 @@
 		 });
 	 }];
 
-	self.controlView.didVR = ^{
-		@strongify(self)
-		self.isVROpen = !self.isVROpen;
-		if(self.isVROpen)
-		{
-			[self.controlView disablePanGesture];
+//	self.controlView.didVR = ^{
+//		@strongify(self)
+//		self.isVROpen = !self.isVROpen;
+//		if(self.isVROpen)
+//		{
+//			[self.controlView disablePanGesture];
+//
+//			self.ffView.rotationMode = FFRotationMode_R180;
+//
+//			[self.ffplay.ffMovie removeAllTargets];
+//
+//			[self.vrfilter removeAllTargets];
+//
+//			[self.ffplay.ffMovie addTarget:self.vrfilter];
+//			[self.vrfilter addTarget:self.ffView];
+//		}
+//		else
+//		{
+//			[self.controlView enablePanGesture];
+//			
+//			self.ffView.rotationMode = FFRotationMode_R0;
+//
+//			[self.ffplay.ffMovie removeAllTargets];
+//			[self.vrfilter removeAllTargets];
+//
+//			[self.ffplay.ffMovie addTarget:self.ffView];
+//            
+//            runAsync(^{
+//                self.currentQuaterion = GLKQuaternionMake(0, 0, 0, 1);
+//                self.lastQuaterion = self.currentQuaterion;
+//                self.vrfilter.currentQuaterion = self.currentQuaterion;
+//            });
+//		}
+//	};
 
-			self.ffView.rotationMode = FFRotationMode_R180;
-
-			[self.ffplay.ffMovie removeAllTargets];
-
-			[self.vrfilter removeAllTargets];
-
-			[self.ffplay.ffMovie addTarget:self.vrfilter];
-			[self.vrfilter addTarget:self.ffView];
-		}
-		else
-		{
-			[self.controlView enablePanGesture];
-			
-			self.ffView.rotationMode = FFRotationMode_R0;
-
-			[self.ffplay.ffMovie removeAllTargets];
-			[self.vrfilter removeAllTargets];
-
-			[self.ffplay.ffMovie addTarget:self.ffView];
-            
-            runAsync(^{
-                self.currentQuaterion = GLKQuaternionMake(0, 0, 0, 1);
-                self.lastQuaterion = self.currentQuaterion;
-                self.vrfilter.currentQuaterion = self.currentQuaterion;
-            });
-		}
-	};
-
-	self.controlView.didFilter = ^{
-		@strongify(self)
-		self.isWaterMarkOpen = !self.isWaterMarkOpen;
-
-		[self.ffplay.ffMovie removeAllTargets];
-		[self.watermark removeAllTargets];
-		[self.mixfilter removeAllTargets];
-
-		if(self.isWaterMarkOpen)
-		{
-			[self.ffplay.ffMovie addTarget:self.mixfilter atIndex:0];
-			[self.watermark addTarget:self.mixfilter atIndex:1];
-			[self.mixfilter addTarget:self.ffView];
-
-			[self.watermark update];
-		}
-		else
-		{
-			[self.ffplay.ffMovie addTarget:self.ffView];
-		}
-	};
+//	self.controlView.didFilter = ^{
+//		@strongify(self)
+//		self.isWaterMarkOpen = !self.isWaterMarkOpen;
+//
+//		[self.ffplay.ffMovie removeAllTargets];
+//		[self.watermark removeAllTargets];
+//		[self.mixfilter removeAllTargets];
+//
+//		if(self.isWaterMarkOpen)
+//		{
+//			[self.ffplay.ffMovie addTarget:self.mixfilter atIndex:0];
+//			[self.watermark addTarget:self.mixfilter atIndex:1];
+//			[self.mixfilter addTarget:self.ffView];
+//
+//			[self.watermark update];
+//		}
+//		else
+//		{
+//			[self.ffplay.ffMovie addTarget:self.ffView];
+//		}
+//	};
 
 	NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
 	[defaultCenter addObserver:self

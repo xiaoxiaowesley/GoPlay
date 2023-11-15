@@ -12,8 +12,8 @@
 @interface VideoView : UIView
 @property(nonatomic,copy) void(^didGoBack)(void);
 @property(nonatomic,copy) void(^didPlay)(void);
-@property(nonatomic,copy) void(^didVR)(void);
-@property(nonatomic,copy) void(^didFilter)(void);
+//@property(nonatomic,copy) void(^didVR)(void);
+//@property(nonatomic,copy) void(^didFilter)(void);
 @property(nonatomic,copy) void(^didSeek)(float);
 @property(nonatomic,copy) void(^didSeeking)(float);
 @property(nonatomic,copy) void(^didUpdateVolume)(float);

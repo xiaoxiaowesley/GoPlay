@@ -32,8 +32,8 @@ const static int kCountdownToHideNum = 5;
 
 @property(nonatomic,strong) UISlider* slider;
 
-@property(nonatomic,strong) UIButton* filterBtn;
-@property(nonatomic,strong) UIButton* vrBtn;
+//@property(nonatomic,strong) UIButton* filterBtn;
+//@property(nonatomic,strong) UIButton* vrBtn;
 @property(nonatomic,strong) UIButton* playBtn;
 @property(nonatomic,strong) UIButton* rotateBtn;
 
@@ -120,8 +120,8 @@ const static int kCountdownToHideNum = 5;
     [self addControls:self.goBackBtn];
     [self addControls:self.slider];
     [self addControls:self.playBtn];
-    [self addControls:self.vrBtn];
-    [self addControls:self.filterBtn];
+//    [self addControls:self.vrBtn];
+//    [self addControls:self.filterBtn];
     [self addControls:self.timeLabel];
     [self addControls:self.rotateBtn];
 }
@@ -171,19 +171,19 @@ const static int kCountdownToHideNum = 5;
         make.size.mas_equalTo(CGSizeMake(44, 44));
     }];
     
-    [self.vrBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.playBtn);
-        make.left.equalTo(self.playBtn.mas_right).offset(15);
-    }];
-    
-    [self.filterBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.playBtn);
-        make.left.equalTo(self.vrBtn.mas_right).offset(15);
-        make.size.mas_equalTo(CGSizeMake(34, 34));
-    }];
+//    [self.vrBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerY.equalTo(self.playBtn);
+//        make.left.equalTo(self.playBtn.mas_right).offset(15);
+//    }];
+//    
+//    [self.filterBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerY.equalTo(self.playBtn);
+//        make.left.equalTo(self.playBtn.mas_right).offset(15);
+//        make.size.mas_equalTo(CGSizeMake(34, 34));
+//    }];
     
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.filterBtn.mas_right).offset(15);
+        make.left.equalTo(self.playBtn.mas_right).offset(15);
         make.centerY.equalTo(self.playBtn);
     }];
     
@@ -215,23 +215,23 @@ const static int kCountdownToHideNum = 5;
         }
     }];
     
-    [[self.vrBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
-     subscribeNext:^(id x) {
-        @strongify(self)
-        if(self.didVR)
-        {
-            self.didVR();
-        }
-    }];
+//    [[self.vrBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
+//     subscribeNext:^(id x) {
+//        @strongify(self)
+//        if(self.didVR)
+//        {
+//            self.didVR();
+//        }
+//    }];
     
-    [[self.filterBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
-     subscribeNext:^(id x) {
-        @strongify(self)
-        if(self.didFilter)
-        {
-            self.didFilter();
-        }
-    }];
+//    [[self.filterBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
+//     subscribeNext:^(id x) {
+//        @strongify(self)
+//        if(self.didFilter)
+//        {
+//            self.didFilter();
+//        }
+//    }];
     
     [[self.slider rac_signalForControlEvents:UIControlEventTouchDown]
      subscribeNext:^(id x) {
@@ -526,27 +526,27 @@ const static int kCountdownToHideNum = 5;
     return _playBtn;
 }
 
-- (UIButton *)vrBtn
-{
-    if(!_vrBtn)
-    {
-        _vrBtn = [[UIButton alloc]init];
-        [_vrBtn setImage:[UIImage imageNamed:@"gg_vr_icon"] forState:UIControlStateNormal];
-    }
-    
-    return _vrBtn;
-}
+//- (UIButton *)vrBtn
+//{
+//    if(!_vrBtn)
+//    {
+//        _vrBtn = [[UIButton alloc]init];
+//        [_vrBtn setImage:[UIImage imageNamed:@"gg_vr_icon"] forState:UIControlStateNormal];
+//    }
+//    
+//    return _vrBtn;
+//}
 
-- (UIButton *)filterBtn
-{
-    if(!_filterBtn)
-    {
-        _filterBtn = [[UIButton alloc]init];
-        [_filterBtn setImage:[UIImage imageNamed:@"gg_copyright_icon"] forState:UIControlStateNormal];
-    }
-    
-    return _filterBtn;
-}
+//- (UIButton *)filterBtn
+//{
+//    if(!_filterBtn)
+//    {
+//        _filterBtn = [[UIButton alloc]init];
+//        [_filterBtn setImage:[UIImage imageNamed:@"gg_copyright_icon"] forState:UIControlStateNormal];
+//    }
+//    
+//    return _filterBtn;
+//}
 
 -(UIButton *)rotateBtn{
     if(!_rotateBtn)

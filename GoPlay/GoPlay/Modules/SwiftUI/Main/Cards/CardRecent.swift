@@ -84,6 +84,14 @@ e        // Your code here
                         Text(NSLocalizedString("Recently imported", comment: "Files imported"))
                             .foregroundColor(Color.textColor)
                         Spacer()
+                        Button(action: {
+                            // Refresh button action
+                            
+                        }) {
+                            Image(systemName: "arrow.clockwise")
+                                .foregroundColor(Color.white)
+                        }
+                        
                     }.padding(.leading)
                 }.onAppear {
                     print("onAppear")

@@ -30,7 +30,7 @@
 //                   但愿老死电脑间，不愿鞠躬老板前；
 //                   奔驰宝马贵者趣，公交自行程序员。
 //                   别人笑我忒疯癫，我笑自己命太贱；
-//                  
+//
 //  Created by 肖湘 on 2023/9/8.
 //  Copyright © 2023 dKingbin. All rights reserved.
 
@@ -87,16 +87,26 @@ struct RecentCardView: View {
                         Text(NSLocalizedString("Recently imported", comment: "Files imported"))
                             .foregroundColor(Color.textColor)
                         Spacer()
+                       
                     }.padding(.leading)
+                    Spacer()
+                    Button(action: {
+                        reflesh()
+                    }) {
+                        Image(systemName: "arrow.clockwise")
+                            .foregroundColor(Color.white)
+                    }
+                    
                 }.onAppear {
                     print("onAppear")
-                    isLoading = true                    
-                    DataManager.shared.getFiles { dataObjectList in
-                        self.input = dataObjectList
-                        DispatchQueue.main.async {
-                            isLoading = false
-                        }
-                    }
+                    reflesh()
+//                    isLoading = true
+//                    DataManager.shared.getFiles { dataObjectList in
+//                        self.input = dataObjectList
+//                        DispatchQueue.main.async {
+//                            isLoading = false
+//                        }
+//                    }
                 }
                 
                 VStack(alignment: .leading){
@@ -113,6 +123,17 @@ struct RecentCardView: View {
                     }
                 }
                 
+            }
+        }
+    }
+    
+    
+    func reflesh() {
+        isLoading = true
+        DataManager.shared.getFiles { dataObjectList in
+            self.input = dataObjectList
+            DispatchQueue.main.async {
+                isLoading = false
             }
         }
     }

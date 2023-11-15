@@ -116,10 +116,13 @@ struct RecentCardView: View {
                         .padding(.horizontal, 16)
                     ForEach(input, id: \.self) { item in
                         FileItemView(dataObject: item, onTap: onTap)
-                        Divider()
-                            .background(Color.white)
-                            .padding(.vertical, 2)
-                            .padding(.horizontal, 16)
+                        
+                        if item != input.last {
+                            Divider()
+                                .background(Color.white.opacity(0.4))
+                                .padding(.vertical, 2)
+                                .padding(.horizontal, 16)
+                        }
                     }
                 }
                 

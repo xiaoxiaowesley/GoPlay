@@ -62,7 +62,7 @@ struct FileItemView: View {
                     .background(Color.clear)
             }
         }.onTouchDownGesture {
-            print("View did tap!")
+            onTap?(dataObject)
         }
     }
 }

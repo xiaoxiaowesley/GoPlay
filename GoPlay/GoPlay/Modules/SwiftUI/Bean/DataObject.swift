@@ -49,33 +49,6 @@ struct DataObject {
         return dateFormatter.string(from: date)
     }
     
-    static func fetchVideoFiles() -> [DataObject] {
-        let fileManager = FileManager.default
-        let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let docPath = documentsURL
-        do {
-            let fileURLs = try fileManager.contentsOfDirectory(at: docPath, includingPropertiesForKeys: nil)
-            
-            // TODO: 过滤所有的视频文件
-            let filePaths:[String]  = fileURLs.filter { $0.pathExtension == "mp4" }.map { $0.path }
-            let dataObjects = filePaths.map { DataObject(filename:URL(fileURLWithPath: $0).lastPathComponent, fullpath:  $0, time: 1694691386) }
-            
-            
-            if dataObjects.isEmpty {
-                // FOR TEST
-                return [
-                    DataObject(filename: "big_buck_bunny.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4", time: 1694691386),
-                    DataObject(filename: "clips.vorwaerts-gmbh.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4", time: 1672506061)
-                ]
-            }
-            
-            return dataObjects
-        } catch {
-            print("Error while enumerating files \(docPath.path): \(error.localizedDescription)")
-        }
-        
-        return []
-    }
 }
 
 extension DataObject: Hashable {

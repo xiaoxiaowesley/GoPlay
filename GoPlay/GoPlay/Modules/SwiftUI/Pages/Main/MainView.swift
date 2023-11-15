@@ -24,26 +24,6 @@ struct MainView: View {
                 Image(systemName: "person.fill")
                 Text(NSLocalizedString("Main", comment: "Main page"))
             }
-//            VStack{
-//                FolderTypeList()
-//            }
-//            .onAppear {
-//                updateTitle(title: "Page One")
-//            }
-//            .tabItem {
-//                Image(systemName: "play.fill")
-//                Text("Page 1")
-//            }
-//            VStack{
-//                CustomListView()
-//            }
-//            .onAppear {
-//                updateTitle(title: "Page Two")
-//            }
-//            .tabItem {
-//                Image(systemName: "person.fill")
-//                Text("Page 2")
-//            }
             
             VStack{
                 

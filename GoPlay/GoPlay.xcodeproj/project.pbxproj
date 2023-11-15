@@ -30,6 +30,7 @@
 		009E44532AB36BE0007A9163 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009E44522AB36BE0007A9163 /* UIDevice.swift */; };
 		00A4511A2A8A91A4003903F3 /* FFmpegUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A451192A8A91A4003903F3 /* FFmpegUtil.m */; };
 		00BF9F092A81585300CFF4DB /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */; };
+		00C704452B050C4D005223D7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C704442B050C4C005223D7 /* DataManager.swift */; };
 		1E33E84E2A78D90D00C32830 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E8472A78D90D00C32830 /* libswresample.a */; };
 		1E33E84F2A78D90E00C32830 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E8482A78D90D00C32830 /* libavcodec.a */; };
 		1E33E8502A78D90E00C32830 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E33E8492A78D90D00C32830 /* libavdevice.a */; };
@@ -337,6 +338,7 @@
 		00A451182A8A91A4003903F3 /* FFmpegUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFmpegUtil.h; sourceTree = "<group>"; };
 		00A451192A8A91A4003903F3 /* FFmpegUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFmpegUtil.m; sourceTree = "<group>"; };
 		00BF9F082A81585300CFF4DB /* FileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewController.swift; sourceTree = "<group>"; };
+		00C704442B050C4C005223D7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		1E33E8472A78D90D00C32830 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = GoPlay/Vendor/FFmpeg/lib/libswresample.a; sourceTree = "<group>"; };
 		1E33E8482A78D90D00C32830 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = GoPlay/Vendor/FFmpeg/lib/libavcodec.a; sourceTree = "<group>"; };
 		1E33E8492A78D90D00C32830 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = GoPlay/Vendor/FFmpeg/lib/libavdevice.a; sourceTree = "<group>"; };
@@ -926,6 +928,7 @@
 			isa = PBXGroup;
 			children = (
 				001B8B712AB20E5C00270355 /* DataObject.swift */,
+				00C704442B050C4C005223D7 /* DataManager.swift */,
 			);
 			path = Bean;
 			sourceTree = "<group>";
@@ -1723,6 +1726,7 @@
 				C44283EE2281692700A01637 /* FFState.m in Sources */,
 				00BF9F092A81585300CFF4DB /* FileManagerViewController.swift in Sources */,
 				C44283892281684500A01637 /* RACGroupedSignal.m in Sources */,
+				00C704452B050C4D005223D7 /* DataManager.swift in Sources */,
 				C44283C42281684500A01637 /* RACSerialDisposable.m in Sources */,
 				C44283AA2281684500A01637 /* UIDatePicker+RACSignalSupport.m in Sources */,
 				C44283982281684500A01637 /* RACKVOTrampoline.m in Sources */,

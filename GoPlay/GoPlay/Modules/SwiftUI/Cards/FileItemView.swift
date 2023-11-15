@@ -35,7 +35,6 @@
 //  Copyright © 2023 dKingbin. All rights reserved.
 
 import SwiftUI
-
 struct FileItemView: View {
     var dataObject: DataObject
     var onTap: ((DataObject) -> Void)? // Add callback function with dataObject parameter
@@ -62,8 +61,8 @@ struct FileItemView: View {
                     .padding(.bottom, 2)
                     .background(Color.clear)
             }
-        }.onTapGesture {
-            onTap?(dataObject) // Call the callback function with dataObject when tapped
+        }.onTouchDownGesture {
+            print("View did tap!")
         }
     }
 }
@@ -71,5 +70,30 @@ struct FileItemView: View {
 struct FileItemView_Previews: PreviewProvider {
     static var previews: some View {
         FileItemView(dataObject:DataObject(filename: "big_buck_bunny.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4", time: 1694691386))
+    }
+}
+
+extension View {
+    func onTouchDownGesture(callback: @escaping () -> Void) -> some View {
+        modifier(OnTouchDownGestureModifier(callback: callback))
+    }
+}
+
+private struct OnTouchDownGestureModifier: ViewModifier {
+    @State private var tapped = false
+    let callback: () -> Void
+
+    func body(content: Content) -> some View {
+        content
+            .simultaneousGesture(DragGesture(minimumDistance: 0)
+                .onChanged { _ in
+                    if !self.tapped {
+                        self.tapped = true
+                        self.callback()
+                    }
+                }
+                .onEnded { _ in
+                    self.tapped = false
+                })
     }
 }

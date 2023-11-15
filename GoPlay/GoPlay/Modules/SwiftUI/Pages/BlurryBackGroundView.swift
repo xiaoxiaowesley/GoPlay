@@ -62,6 +62,7 @@ struct BlurryBackGroundView: View {
                         .offset(x: 150, y: 105)
                 }
                 ScrollView {
+                    //导航栏
                     HStack {
                         Image(systemName: "text.justify")
                             .font(.title3)
@@ -76,8 +77,11 @@ struct BlurryBackGroundView: View {
                             .foregroundColor(Color.white)
                     }.padding(.horizontal)
                     VStack {
+                        //最近导入
                         CardRecent()
+                        //应用文件夹
                         CardDocument()
+                        //
                         CardFolder()
                     }
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)

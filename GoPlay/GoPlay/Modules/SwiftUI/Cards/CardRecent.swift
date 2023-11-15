@@ -47,6 +47,7 @@ struct CardRecent: View {
                 .cornerRadius(10)
                 .padding(.vertical, 6)
                 .padding(.horizontal)
+                .border(Color.black,width: 1.0)
         }
     }
 }
@@ -89,9 +90,9 @@ struct RecentCardView: View {
                     }.padding(.leading)
                 }.onAppear {
                     print("onAppear")
-                    isLoading = true
-                    DispatchQueue.global(qos: .background).async {
-                        self.input = DataObject.fetchVideoFiles()
+                    isLoading = true                    
+                    DataManager.shared.getFiles { dataObjectList in
+                        self.input = dataObjectList
                         DispatchQueue.main.async {
                             isLoading = false
                         }

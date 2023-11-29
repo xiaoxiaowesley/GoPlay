@@ -27,6 +27,7 @@ typedef enum {
 #define PLAYING @"\u{e616}"
 #define PAUSED @"\u{e615}"
 #define NEXT @"\u{e607}"
+#define FORMAER @"\u{e606}"
 
 //5 seconds
 const static int kCountdownToHideNum = 5;
@@ -35,8 +36,9 @@ const static int kCountdownToHideNum = 5;
 @property(nonatomic,strong) UIButton* goBackBtn; // 返回按钮
 @property(nonatomic,strong) UISlider* slider;  // 进度条
 @property(nonatomic,strong) UIButton* playBtn; // 播放按钮
+@property(nonatomic,strong) UIButton* formerBtn; // 前一个按钮
 @property(nonatomic,strong) UIButton* nextBtn; // 下一个按钮
-@property(nonatomic,strong) UIButton* rotateBtn; // 旋转按钮    
+@property(nonatomic,strong) UIButton* rotateBtn; // 旋转按钮
 
 @property(nonatomic,strong) NSMutableArray* landscapeControls;
 @property(nonatomic,assign) int countdownToHide;
@@ -89,7 +91,7 @@ const static int kCountdownToHideNum = 5;
     {
         // [self.playBtn setImage:[UIImage imageNamed:@"gg_play_icon"] forState:UIControlStateNormal];
         [self.playBtn setTitle:PLAYING forState:UIControlStateNormal];
-
+        
     }
     
     self.countdownToHide = kCountdownToHideNum;
@@ -126,8 +128,9 @@ const static int kCountdownToHideNum = 5;
     [self addControls:self.slider];
     [self addControls:self.playBtn];
     [self addControls:self.nextBtn];
-//    [self addControls:self.vrBtn];
-//    [self addControls:self.filterBtn];
+    [self addControls:self.formerBtn];
+    //    [self addControls:self.vrBtn];
+    //    [self addControls:self.filterBtn];
     [self addControls:self.timeLabel];
     [self addControls:self.rotateBtn];
 }
@@ -177,12 +180,18 @@ const static int kCountdownToHideNum = 5;
         make.left.equalTo(self).offset(horizonSpace);
         make.right.equalTo(self).offset(-horizonSpace);
     }];
-    
-    [self.playBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+    [self.formerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(horizonSpace);
         make.bottom.equalTo(self).offset(-bottom);
         make.size.mas_equalTo(CGSizeMake(44, 44));
-    }];    
+    }];
+    
+    [self.playBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.formerBtn).offset(horizonSpace);
+        make.bottom.equalTo(self).offset(-bottom);
+        make.size.mas_equalTo(CGSizeMake(44, 44));
+    }];
     
     [self.nextBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.playBtn).offset(horizonSpace);
@@ -190,16 +199,17 @@ const static int kCountdownToHideNum = 5;
         make.size.mas_equalTo(CGSizeMake(44, 44));
     }];
     
-//    [self.vrBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerY.equalTo(self.playBtn);
-//        make.left.equalTo(self.playBtn.mas_right).offset(15);
-//    }];
-//    
-//    [self.filterBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerY.equalTo(self.playBtn);
-//        make.left.equalTo(self.playBtn.mas_right).offset(15);
-//        make.size.mas_equalTo(CGSizeMake(34, 34));
-//    }];
+    
+    //    [self.vrBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.centerY.equalTo(self.playBtn);
+    //        make.left.equalTo(self.playBtn.mas_right).offset(15);
+    //    }];
+    //
+    //    [self.filterBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.centerY.equalTo(self.playBtn);
+    //        make.left.equalTo(self.playBtn.mas_right).offset(15);
+    //        make.size.mas_equalTo(CGSizeMake(34, 34));
+    //    }];
     
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.nextBtn.mas_right).offset(15);
@@ -233,24 +243,43 @@ const static int kCountdownToHideNum = 5;
             self.didPlay();
         }
     }];
+
+    [[self.formerBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
+     subscribeNext:^(id x) {
+        @strongify(self)
+        if(self.didFormer)
+        {
+            self.didFormer();
+        }
+    }];
+
+    [[self.nextBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
+     subscribeNext:^(id x) {
+        @strongify(self)
+        if(self.didNext)
+        {
+            self.didNext();
+        }
+    }];
     
-//    [[self.vrBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
-//     subscribeNext:^(id x) {
-//        @strongify(self)
-//        if(self.didVR)
-//        {
-//            self.didVR();
-//        }
-//    }];
     
-//    [[self.filterBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
-//     subscribeNext:^(id x) {
-//        @strongify(self)
-//        if(self.didFilter)
-//        {
-//            self.didFilter();
-//        }
-//    }];
+    //    [[self.vrBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
+    //     subscribeNext:^(id x) {
+    //        @strongify(self)
+    //        if(self.didVR)
+    //        {
+    //            self.didVR();
+    //        }
+    //    }];
+    
+    //    [[self.filterBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
+    //     subscribeNext:^(id x) {
+    //        @strongify(self)
+    //        if(self.didFilter)
+    //        {
+    //            self.didFilter();
+    //        }
+    //    }];
     
     [[self.slider rac_signalForControlEvents:UIControlEventTouchDown]
      subscribeNext:^(id x) {
@@ -538,7 +567,7 @@ const static int kCountdownToHideNum = 5;
 {
     if(!_playBtn)
     {
-        _playBtn = [[UIButton alloc]init];        
+        _playBtn = [[UIButton alloc]init];
         _playBtn.titleLabel.font = [UIFont fontWithName:@"flat-ui-pro-icons" size:20];
         [_playBtn setTitle:PAUSED forState:UIControlStateNormal];
     }
@@ -554,6 +583,19 @@ const static int kCountdownToHideNum = 5;
     }
     return _nextBtn;
 }
+
+- (UIButton *)formerBtn
+{
+    if(!_formerBtn)
+    {
+        _formerBtn = [[UIButton alloc]init];
+        //设置titile
+        _formerBtn.titleLabel.font = [UIFont fontWithName:@"flat-ui-pro-icons" size:20];
+        [_formerBtn setTitle:FORMAER forState:UIControlStateNormal];
+    }
+    
+    return _formerBtn;
+}
 //- (UIButton *)vrBtn
 //{
 //    if(!_vrBtn)
@@ -561,7 +603,7 @@ const static int kCountdownToHideNum = 5;
 //        _vrBtn = [[UIButton alloc]init];
 //        [_vrBtn setImage:[UIImage imageNamed:@"gg_vr_icon"] forState:UIControlStateNormal];
 //    }
-//    
+//
 //    return _vrBtn;
 //}
 
@@ -572,7 +614,7 @@ const static int kCountdownToHideNum = 5;
 //        _filterBtn = [[UIButton alloc]init];
 //        [_filterBtn setImage:[UIImage imageNamed:@"gg_copyright_icon"] forState:UIControlStateNormal];
 //    }
-//    
+//
 //    return _filterBtn;
 //}
 

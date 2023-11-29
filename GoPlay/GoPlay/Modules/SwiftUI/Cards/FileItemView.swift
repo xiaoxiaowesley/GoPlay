@@ -47,15 +47,14 @@ struct FileItemView: View {
                 Image(systemName: "play.square")
                     .foregroundColor(Color.white)
                     .frame(width: 40, height: 40)
-                
                 VStack(alignment: .leading){
                     Text(dataObject.filename)
                         .foregroundColor(Color.textColor)
                         .lineLimit(1)
-                        .font(.system(size: 16)) // Increase font size
+                        .font(.system(size: 16))
                         .foregroundColor(.gray)
                         .padding(.top, 2)
-                        .padding(.bottom, 0) // Decrease bottom padding
+                        .padding(.bottom, 0) 
                         .background(Color.clear)
                     Text(dataObject.timeString)
                         .foregroundColor(Color.textColor)

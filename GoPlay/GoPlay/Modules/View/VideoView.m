@@ -135,15 +135,14 @@ const static int kCountdownToHideNum = 5;
 - (void)defineLayouts
 {
     // 获取当前设备是否竖屏/横屏，并赋值给isPortrait
-    BOOL isPortrait = UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation);
-    
+    BOOL isPortrait = UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].windows.firstObject.windowScene.interfaceOrientation);
     // 返回按钮
     [self.goBackBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         // 如果当前是竖屏，而且是刘海屏，top的边距需要加30
         if (isPortrait && [UIDevice isNotch]) {
-            make.top.equalTo(self).offset(30+15);
+            make.top.equalTo(self).offset(30+20);
         }else{
-            make.top.equalTo(self).offset(15);
+            make.top.equalTo(self).offset(20);
         }
         
         make.left.equalTo(self).offset(15);

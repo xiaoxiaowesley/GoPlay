@@ -24,17 +24,19 @@ typedef enum {
     sd_horizontal ,
 } SwipeDirection;
 
+#define PLAYING @"\u{e616}"
+#define PAUSED @"\u{e615}"
+#define NEXT @"\u{e607}"
+
 //5 seconds
 const static int kCountdownToHideNum = 5;
 
 @interface VideoView()
-@property(nonatomic,strong) UIButton* goBackBtn;
-@property(nonatomic,strong) UISlider* slider;
-
-//@property(nonatomic,strong) UIButton* filterBtn;
-//@property(nonatomic,strong) UIButton* vrBtn;
-@property(nonatomic,strong) UIButton* playBtn;
-@property(nonatomic,strong) UIButton* rotateBtn;
+@property(nonatomic,strong) UIButton* goBackBtn; // 返回按钮
+@property(nonatomic,strong) UISlider* slider;  // 进度条
+@property(nonatomic,strong) UIButton* playBtn; // 播放按钮
+@property(nonatomic,strong) UIButton* nextBtn; // 下一个按钮
+@property(nonatomic,strong) UIButton* rotateBtn; // 旋转按钮    
 
 @property(nonatomic,strong) NSMutableArray* landscapeControls;
 @property(nonatomic,assign) int countdownToHide;
@@ -80,11 +82,14 @@ const static int kCountdownToHideNum = 5;
     
     if(isPlay)
     {
-        [self.playBtn setImage:[UIImage imageNamed:@"gg_pause_icon"] forState:UIControlStateNormal];
+        // [self.playBtn setImage:[UIImage imageNamed:@"gg_pause_icon"] forState:UIControlStateNormal];
+        [self.playBtn setTitle:PAUSED  forState:UIControlStateNormal];
     }
     else
     {
-        [self.playBtn setImage:[UIImage imageNamed:@"gg_play_icon"] forState:UIControlStateNormal];
+        // [self.playBtn setImage:[UIImage imageNamed:@"gg_play_icon"] forState:UIControlStateNormal];
+        [self.playBtn setTitle:PLAYING forState:UIControlStateNormal];
+
     }
     
     self.countdownToHide = kCountdownToHideNum;
@@ -120,6 +125,7 @@ const static int kCountdownToHideNum = 5;
     [self addControls:self.titleLabel];
     [self addControls:self.slider];
     [self addControls:self.playBtn];
+    [self addControls:self.nextBtn];
 //    [self addControls:self.vrBtn];
 //    [self addControls:self.filterBtn];
     [self addControls:self.timeLabel];
@@ -158,7 +164,7 @@ const static int kCountdownToHideNum = 5;
     }];
     
     double bottom = 0;
-    double horizonSpace = 30;
+    double horizonSpace = 50;
     if (isPortrait && [UIDevice isNotch]) {
         bottom = [UIDevice safeAreaInsets].bottom;
     }
@@ -176,6 +182,12 @@ const static int kCountdownToHideNum = 5;
         make.left.equalTo(self).offset(horizonSpace);
         make.bottom.equalTo(self).offset(-bottom);
         make.size.mas_equalTo(CGSizeMake(44, 44));
+    }];    
+    
+    [self.nextBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.playBtn).offset(horizonSpace);
+        make.bottom.equalTo(self).offset(-bottom);
+        make.size.mas_equalTo(CGSizeMake(44, 44));
     }];
     
 //    [self.vrBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -190,8 +202,8 @@ const static int kCountdownToHideNum = 5;
 //    }];
     
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.playBtn.mas_right).offset(15);
-        make.centerY.equalTo(self.playBtn);
+        make.left.equalTo(self.nextBtn.mas_right).offset(15);
+        make.centerY.equalTo(self.nextBtn);
     }];
     
     [self.rotateBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -526,13 +538,22 @@ const static int kCountdownToHideNum = 5;
 {
     if(!_playBtn)
     {
-        _playBtn = [[UIButton alloc]init];
-        [_playBtn setImage:[UIImage imageNamed:@"gg_play_icon"] forState:UIControlStateNormal];
+        _playBtn = [[UIButton alloc]init];        
+        _playBtn.titleLabel.font = [UIFont fontWithName:@"flat-ui-pro-icons" size:20];
+        [_playBtn setTitle:PAUSED forState:UIControlStateNormal];
     }
     
     return _playBtn;
 }
-
+-(UIButton *)nextBtn{
+    if(!_nextBtn){
+        _nextBtn = [[UIButton alloc]init];
+        //设置titile
+        _nextBtn.titleLabel.font = [UIFont fontWithName:@"flat-ui-pro-icons" size:20];
+        [_nextBtn setTitle:NEXT forState:UIControlStateNormal];
+    }
+    return _nextBtn;
+}
 //- (UIButton *)vrBtn
 //{
 //    if(!_vrBtn)

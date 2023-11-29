@@ -30,7 +30,7 @@
 //                   但愿老死电脑间，不愿鞠躬老板前；
 //                   奔驰宝马贵者趣，公交自行程序员。
 //                   别人笑我忒疯癫，我笑自己命太贱；
-//                  
+//
 //  Created by xiaoxiang's m1 mbp on 2023/9/14.
 //  Copyright © 2023 dKingbin. All rights reserved.
 
@@ -39,30 +39,32 @@ struct FileItemView: View {
     var dataObject: DataObject
     var onTap: ((DataObject) -> Void)? // Add callback function with dataObject parameter
     var body: some View {
-        HStack{
-            Image(systemName: "play.square")
-                .foregroundColor(Color.white)
-                .frame(width: 40, height: 40)
-            
-            VStack(alignment: .leading){
-                Text(dataObject.filename)
-                    .foregroundColor(Color.textColor)
-                    .lineLimit(1)
-                    .font(.system(size: 16)) // Increase font size
-                    .foregroundColor(.gray)
-                    .padding(.top, 2)
-                    .padding(.bottom, 0) // Decrease bottom padding
-                    .background(Color.clear)
-                
-                Text(dataObject.timeString)
-                    .foregroundColor(Color.textColor)
-                    .lineLimit(1)
-                    .font(.system(size: 10))
-                    .padding(.bottom, 2)
-                    .background(Color.clear)
-            }
-        }.onTouchDownGesture {
+        Button(action: {
             onTap?(dataObject)
+        }) {
+            
+            HStack{
+                Image(systemName: "play.square")
+                    .foregroundColor(Color.white)
+                    .frame(width: 40, height: 40)
+                
+                VStack(alignment: .leading){
+                    Text(dataObject.filename)
+                        .foregroundColor(Color.textColor)
+                        .lineLimit(1)
+                        .font(.system(size: 16)) // Increase font size
+                        .foregroundColor(.gray)
+                        .padding(.top, 2)
+                        .padding(.bottom, 0) // Decrease bottom padding
+                        .background(Color.clear)
+                    Text(dataObject.timeString)
+                        .foregroundColor(Color.textColor)
+                        .lineLimit(1)
+                        .font(.system(size: 10))
+                        .padding(.bottom, 2)
+                        .background(Color.clear)
+                }
+            }
         }
     }
 }
@@ -70,30 +72,5 @@ struct FileItemView: View {
 struct FileItemView_Previews: PreviewProvider {
     static var previews: some View {
         FileItemView(dataObject:DataObject(filename: "big_buck_bunny.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4", time: 1694691386))
-    }
-}
-
-extension View {
-    func onTouchDownGesture(callback: @escaping () -> Void) -> some View {
-        modifier(OnTouchDownGestureModifier(callback: callback))
-    }
-}
-
-private struct OnTouchDownGestureModifier: ViewModifier {
-    @State private var tapped = false
-    let callback: () -> Void
-
-    func body(content: Content) -> some View {
-        content
-            .simultaneousGesture(DragGesture(minimumDistance: 0)
-                .onChanged { _ in
-                    if !self.tapped {
-                        self.tapped = true
-                        self.callback()
-                    }
-                }
-                .onEnded { _ in
-                    self.tapped = false
-                })
     }
 }

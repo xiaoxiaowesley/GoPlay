@@ -41,7 +41,7 @@ struct FileItemView: View {
     var body: some View {
         Button(action: {
             onTap?(dataObject)
-        }) {
+        } ,label: {
             
             HStack{
                 Image(systemName: "play.square")
@@ -65,7 +65,7 @@ struct FileItemView: View {
                         .background(Color.clear)
                 }
             }
-        }
+        })
     }
 }
 

@@ -27,6 +27,10 @@
 #import "FFAlphaBendFilter.h"
 
 @interface PlayViewController ()
+{
+    NSMutableArray<PlayInfo *> *playList;
+    PlayInfo * currentPlayInfo;
+}
 @property(nonatomic,strong) FFView* ffView;
 @property(nonatomic,strong) FFPlay* ffplay;
 @property(nonatomic,strong) VideoView* controlView;
@@ -46,6 +50,7 @@
 @property(nonatomic,assign) GLKVector3 currentVector;
 @property(nonatomic,assign) GLKQuaternion lastQuaterion;
 @property(nonatomic,assign) GLKQuaternion currentQuaterion;
+
 @end
 
 @implementation PlayViewController
@@ -53,6 +58,8 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+    playList = [NSMutableArray new];
+    
 	self.view.backgroundColor = UIColor.blackColor;
 	self.currentPanTime = 0.0;
     
@@ -182,6 +189,21 @@
         FFRotationMode nextMode = (FFRotationMode)nextModeIdx;
         self.ffplay.ffMovie.mode = nextMode;
     };
+    
+    self.controlView.didNext = ^{
+        //
+        NSLog(@"下一个");
+        
+        // 1.获取所有的文件数组
+        // 2.获取当前文件在数组中的位置
+        // 3.获取下一个文件
+    };
+    
+    self.controlView.didFormer =^{
+        //
+        NSLog(@"前一个");
+    };
+    
 
 	[RACObserve(self.ffplay.state, playing)
 	 subscribeNext:^(id x) {
@@ -375,11 +397,12 @@
 	[super viewWillAppear:animated];
 
 	[self.navigationController setNavigationBarHidden:YES];
-	[[UIApplication sharedApplication] setStatusBarHidden:YES];
+//	[[UIApplication sharedApplication] setStatusBarHidden:YES];
+    [self prefersStatusBarHidden];
 
 	self.brightness = [[UIScreen mainScreen] brightness];
 
-	//disable animate before orientation
+//	disable animate before orientation
 	[UIView setAnimationsEnabled:NO];
     
     [self.ffplay play];
@@ -404,7 +427,8 @@
 	[super viewWillDisappear:animated];
 
 	[self.navigationController setNavigationBarHidden:NO];
-	[[UIApplication sharedApplication] setStatusBarHidden:NO];
+//	[[UIApplication sharedApplication] setStatusBarHidden:NO];
+    [self prefersStatusBarHidden];
 
 	[[UIScreen mainScreen] setBrightness:self.brightness];
 }
@@ -498,8 +522,43 @@
 
 - (void)dealloc
 {
-	self.ffplay = nil;
+//	self.ffplay = nil;
+    [self stop];
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+-(void)stop{
+    self.ffplay = nil;
+}
+
+//播放其他
+-(void)play:(NSString *)url fileName:(NSString*) filename{
+    if (self.ffplay) {
+        self.ffplay = nil;
+    }
+    self.ffplay.url = url;
+    self.fileName = filename;
+    
+    [self.ffplay play];
+    self.controlView.isPlay = YES;
+}
+
+-(void)setPlayList:(NSArray<PlayInfo *> *)pl playIndex:(NSInteger)index{
+	// 1. 清空playList
+	[playList removeAllObjects];
+
+	// 2. 将pl加入到playList
+	[playList addObjectsFromArray:pl];
+
+	// 3. 获取数组中索引为index的对象
+    
+    PlayInfo *playInfo = [playList objectAtIndex:index];
+    if(playInfo){
+        currentPlayInfo = playInfo;
+        [self play:playInfo.url fileName:playInfo.fileName];
+    }
+    
+    
+//    [playList indexOfObject:0]
+}
 @end

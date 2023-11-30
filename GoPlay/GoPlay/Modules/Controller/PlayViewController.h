@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 
+@interface PlayInfo : NSObject
+@property(nonatomic,strong) NSString* url;
+@property(nonatomic,strong) NSString* fileName;
+@end
+
 @interface PlayViewController : BaseViewController
 @property(nonatomic,strong) NSString* url;
 @property(nonatomic,strong) NSString* fileName;
+-(void)setPlayList:(NSArray<PlayInfo *> *)playList playIndex:(NSInteger)index;
 @end

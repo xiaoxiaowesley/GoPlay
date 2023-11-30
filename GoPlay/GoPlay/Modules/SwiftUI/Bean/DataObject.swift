@@ -36,7 +36,7 @@
 
 import Foundation
 
-struct DataObject {
+@objc class DataObject: NSObject {
     let filename: String
     let fullpath: String
     let time: Int64  //TODO:换成时间戳
@@ -49,16 +49,24 @@ struct DataObject {
         return dateFormatter.string(from: date)
     }
     
-}
-
-extension DataObject: Hashable {
-    static func == (lhs: DataObject, rhs: DataObject) -> Bool {
-        return lhs.fullpath == rhs.fullpath && lhs.filename == rhs.filename && lhs.time == rhs.time
+    init(filename: String, fullpath: String, time: Int64) {
+        self.filename = filename
+        self.fullpath = fullpath
+        self.time = time
     }
     
-    func hash(into hasher: inout Hasher) {
+    override var hash: Int {
+        var hasher = Hasher()
         hasher.combine(fullpath)
         hasher.combine(filename)
         hasher.combine(time)
+        return hasher.finalize()
+    }
+    
+    override func isEqual(_ object: Any?) -> Bool {
+        guard let other = object as? DataObject else {
+            return false
+        }
+        return fullpath == other.fullpath && filename == other.filename && time == other.time
     }
 }

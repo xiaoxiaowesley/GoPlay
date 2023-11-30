@@ -37,10 +37,10 @@
 import SwiftUI
 struct FileItemView: View {
     var dataObject: DataObject
-    var onTap: ((DataObject) -> Void)? // Add callback function with dataObject parameter
+    var onTap: (([DataObject],Int) -> Void)? // Add callback function with dataObject parameter
     var body: some View {
         Button(action: {
-            onTap?(dataObject)
+            //onTap?(dataObject)
         } ,label: {
             
             HStack{

@@ -67,10 +67,14 @@ struct RecentCardView: View {
         self.input = [] // Initialize the input array
     }
     
-    func onTap(dataObject: DataObject) {
+    func onTap(dataObjects: [DataObject],index:Int) {
         let player = PlayViewController()
-        player.url = dataObject.fullpath
-        player.fileName = dataObject.filename
+//        player.setPlayList(<#T##playList: [PlayInfo]!##[PlayInfo]!#>, play: <#T##Int#>)
+//        player.url = dataObject.fullpath
+//        player.fileName = dataObject.filename
+        
+        //将
+        
         let nav = UIApplication.shared.windows.first?.rootViewController as? UINavigationController
         nav?.pushViewController(player, animated: true)
     }
@@ -116,7 +120,18 @@ struct RecentCardView: View {
                         .padding(.vertical, 2)
                         .padding(.horizontal, 16)
                     ForEach(input, id: \.self) { item in
-                        FileItemView(dataObject: item, onTap: onTap)
+                        // 获取item在input的index
+                        
+                        
+                        // 获取item在input的index
+                        if let index = input.firstIndex(where: { $0 == item }) {
+                            // 在这里使用index
+                            // ...
+                            
+                            FileItemView(dataObject: item, onTap:onTap)
+
+                        }
+                        
                         
                         if item != input.last {
                             Divider()

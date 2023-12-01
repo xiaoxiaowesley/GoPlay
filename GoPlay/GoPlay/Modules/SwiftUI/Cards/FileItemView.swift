@@ -36,8 +36,8 @@
 
 import SwiftUI
 struct FileItemView: View {
-    var dataObject: DataObject
-    var onTap: (([DataObject],Int) -> Void)? // Add callback function with dataObject parameter
+    var dataObject: FileInfo
+    var onTap: (([FileInfo],Int) -> Void)? // Add callback function with dataObject parameter
     var body: some View {
         Button(action: {
             //onTap?(dataObject)
@@ -70,6 +70,6 @@ struct FileItemView: View {
 
 struct FileItemView_Previews: PreviewProvider {
     static var previews: some View {
-        FileItemView(dataObject:DataObject(filename: "big_buck_bunny.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4", time: 1694691386))
+        FileItemView(dataObject:FileInfo(filename: "big_buck_bunny.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4", time: 1694691386))
     }
 }

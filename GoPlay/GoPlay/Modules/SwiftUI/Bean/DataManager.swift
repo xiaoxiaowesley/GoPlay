@@ -46,7 +46,7 @@ class DataManager {
 
     
     /// 获取文件
-    func getFiles(callback: @escaping ([DataObject]) -> Void){
+    func getFiles(callback: @escaping ([FileInfo]) -> Void){
         DispatchQueue.global(qos: .background).async {
             self.videoFiles = self.fetchVideoFiles()
             DispatchQueue.main.async {
@@ -56,7 +56,7 @@ class DataManager {
     }
     
     /// 同步搜视频文件
-    private func fetchVideoFiles() -> [DataObject] {
+    private func fetchVideoFiles() -> [FileInfo] {
         let fileManager = FileManager.default
         let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let docPath = documentsURL
@@ -65,14 +65,14 @@ class DataManager {
             
             // TODO: 过滤所有的视频文件
             let filePaths:[String]  = fileURLs.filter { $0.pathExtension == "mp4" }.map { $0.path }
-            let dataObjects = filePaths.map { DataObject(filename:URL(fileURLWithPath: $0).lastPathComponent, fullpath:  $0, time: 1694691386) }
+            let dataObjects = filePaths.map { FileInfo(filename:URL(fileURLWithPath: $0).lastPathComponent, fullpath:  $0, time: 1694691386) }
             
             
             if dataObjects.isEmpty {
                 // FOR TEST
                 return [
-                    DataObject(filename: "big_buck_bunny.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4", time: 1694691386),
-                    DataObject(filename: "clips.vorwaerts-gmbh.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4", time: 1672506061)
+                    FileInfo(filename: "big_buck_bunny.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4", time: 1694691386),
+                    FileInfo(filename: "clips.vorwaerts-gmbh.mp4", fullpath: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4", time: 1672506061)
                 ]
             }
             
@@ -84,5 +84,5 @@ class DataManager {
         return []
     }
     
-    private var videoFiles : [DataObject]
+    private var videoFiles : [FileInfo]
 }

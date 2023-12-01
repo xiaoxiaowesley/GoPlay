@@ -60,14 +60,14 @@ struct CardRecent_Previews: PreviewProvider {
 
 struct RecentCardView: View {
     
-    @State private var input: [DataObject]
+    @State private var input: [FileInfo]
     @State private var isLoading = false
     
     init() {
         self.input = [] // Initialize the input array
     }
     
-    func onTap(dataObjects: [DataObject],index:Int) {
+    func onTap(dataObjects: [FileInfo],index:Int) {
         let player = PlayViewController()
 //        player.setPlayList(<#T##playList: [PlayInfo]!##[PlayInfo]!#>, play: <#T##Int#>)
 //        player.url = dataObject.fullpath
